@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 10%;
 
-    --primary: 262 80% 55%;
+    --primary: 280 40% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 5% 96%;
@@ -25,21 +25,25 @@
     --muted: 240 5% 96%;
     --muted-foreground: 240 5% 45%;
 
-    --accent: 262 80% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 190 60% 70%;
+    --accent-foreground: 240 10% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 240 5% 90%;
     --input: 240 5% 90%;
-    --ring: 262 80% 55%;
+    --ring: 280 40% 60%;
 
     --radius: 0.75rem;
 
-    /* Glow Effects */
-    --glow-primary: 262 80% 55%;
-    --glow-subtle: 262 30% 60%;
+    /* Glow Effects - Pink/Lavender to Cyan */
+    --glow-primary: 280 40% 70%;
+    --glow-subtle: 190 50% 75%;
+    
+    /* Hero Gradient */
+    --hero-gradient-start: 300 30% 85%;
+    --hero-gradient-end: 190 40% 88%;
     
     /* Shadows */
     --shadow-soft: 0 4px 24px -8px hsl(240 5% 10% / 0.1);
@@ -57,7 +61,7 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 262 80% 60%;
+    --primary: 280 45% 65%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 12%;
@@ -66,7 +70,7 @@
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 55%;
 
-    --accent: 262 80% 60%;
+    --accent: 190 60% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
@@ -74,15 +78,19 @@
 
     --border: 0 0% 14%;
     --input: 0 0% 14%;
-    --ring: 262 80% 60%;
+    --ring: 280 45% 65%;
 
-    /* Glow Effects */
-    --glow-primary: 262 80% 60%;
-    --glow-subtle: 262 20% 30%;
+    /* Glow Effects - Pink/Lavender to Cyan */
+    --glow-primary: 280 40% 65%;
+    --glow-subtle: 190 50% 50%;
+    
+    /* Hero Gradient */
+    --hero-gradient-start: 300 30% 25%;
+    --hero-gradient-end: 190 40% 20%;
     
     /* Shadows */
-    --shadow-soft: 0 4px 24px -8px hsl(262 80% 60% / 0.15);
-    --shadow-card: 0 8px 40px -12px hsl(262 80% 60% / 0.1);
+    --shadow-soft: 0 4px 24px -8px hsl(280 40% 60% / 0.15);
+    --shadow-card: 0 8px 40px -12px hsl(280 40% 60% / 0.1);
   }
 }
 
