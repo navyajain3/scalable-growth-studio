@@ -14,7 +14,7 @@ export function AnimatedHeading({
   as: Component = "h2",
   children,
   className,
-  staggerDelay = 50,
+  staggerDelay = 60,
 }: AnimatedHeadingProps) {
   const [visibleCount, setVisibleCount] = React.useState(0);
   const [hasStarted, setHasStarted] = React.useState(false);
@@ -69,8 +69,10 @@ export function AnimatedHeading({
         <span
           key={index}
           className={cn(
-            "inline-block transition-none",
-            index < visibleCount ? "opacity-100" : "opacity-0"
+            "inline-block transition-colors duration-200",
+            index < visibleCount 
+              ? "text-foreground" 
+              : "text-muted-foreground/20"
           )}
         >
           {word}
