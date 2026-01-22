@@ -39,30 +39,30 @@ export function WhoWeHelp() {
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           {/* Left Column - Content */}
-          <div className="space-y-0">
+          <div>
             {/* Section Label */}
-            <span className="text-sm uppercase tracking-widest text-muted-foreground mb-6 block">
+            <span className="text-sm uppercase tracking-widest text-muted-foreground mb-8 block">
               Who We Help
             </span>
 
             {/* Main Heading */}
-            <h2 className="heading-lg mb-8">
+            <h2 className="heading-lg mb-12">
               Empowering bold ideas across industries.
             </h2>
 
             {/* Intro Text */}
-            <p className="body-lg mb-16">
+            <p className="body-lg mb-20">
               We work with ambitious teams and individuals who want to build
               strong digital identities and scale with intention.
             </p>
 
             {/* Audience Blocks */}
-            <div className="space-y-0">
+            <div>
               {audiences.map((item, index) => (
                 <div
                   key={item.title}
-                  className={`py-6 border-b border-border last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up ${
-                    activeIndex === index ? "bg-secondary/30 -mx-4 px-4 rounded-lg border-transparent" : ""
+                  className={`py-8 border-b border-border last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up ${
+                    activeIndex === index ? "bg-secondary/20 -mx-6 px-6 rounded-lg border-transparent" : ""
                   }`}
                   style={{ animationDelay: `${0.1 * (index + 1)}s` }}
                   onMouseEnter={() => setActiveIndex(index)}
