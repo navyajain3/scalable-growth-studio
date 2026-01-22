@@ -14,7 +14,7 @@ export function AnimatedHeading({
   as: Component = "h2",
   children,
   className,
-  staggerDelay = 30,
+  staggerDelay = 18,
 }: AnimatedHeadingProps) {
   const [visibleCount, setVisibleCount] = React.useState(0);
   const [hasStarted, setHasStarted] = React.useState(false);
