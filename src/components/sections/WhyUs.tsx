@@ -69,7 +69,7 @@ export function WhyUs() {
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
               <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 flex items-center justify-center mb-5">
-                <reason.icon className="w-5 h-5 text-violet-500" />
+                <reason.icon className="w-5 h-5 text-foreground" />
               </div>
               <h3 className="text-lg font-medium mb-2">{reason.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{reason.description}</p>
