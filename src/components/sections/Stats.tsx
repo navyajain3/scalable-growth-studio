@@ -8,25 +8,29 @@ const stats = [
 
 const testimonials = [
   {
-    quote: "ScalKit transformed our digital presence completely. Their strategic approach and execution excellence helped us achieve 3x growth in just 6 months.",
+    quote:
+      "ScalKit transformed our digital presence completely. Their strategic approach and execution excellence helped us achieve 3x growth in just 6 months.",
     author: "Dr. Andrea Herschorn",
     role: "Founder & CEO",
     rating: 5,
   },
   {
-    quote: "Working with ScalKit felt like having an extended team. They understood our vision instantly and delivered beyond expectations.",
+    quote:
+      "Working with ScalKit felt like having an extended team. They understood our vision instantly and delivered beyond expectations.",
     author: "Pranav",
     role: "Co-Founder",
     rating: 5,
   },
   {
-    quote: "The attention to detail and commitment to quality is unmatched. ScalKit doesn't just deliver projects—they build partnerships.",
+    quote:
+      "The attention to detail and commitment to quality is unmatched. ScalKit doesn't just deliver projects—they build partnerships.",
     author: "Jugadveer Singh",
     role: "Managing Director",
     rating: 5,
   },
   {
-    quote: "From branding to development, every deliverable was polished and professional. ScalKit is now our go-to digital partner.",
+    quote:
+      "From branding to development, every deliverable was polished and professional. ScalKit is now our go-to digital partner.",
     author: "Rahul K",
     role: "Founder",
     rating: 5,
@@ -42,12 +46,8 @@ export function Stats() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Our Impact
           </span>
-          <h2 className="heading-lg mb-4">
-            Trusted by ambitious brands worldwide.
-          </h2>
-          <p className="body-lg text-muted-foreground">
-            Numbers and stories that speak for themselves.
-          </p>
+          <h2 className="heading-lg mb-4">Trusted by ambitious brands worldwide.</h2>
+          <p className="body-lg text-muted-foreground">Real feedback from founders and teams we’ve partnered with.</p>
         </div>
 
         {/* Stats Row */}
@@ -58,9 +58,7 @@ export function Stats() {
               className="text-center opacity-0 animate-slide-up"
               style={{ animationDelay: `${0.1 * (index + 1)}s` }}
             >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-2">
-                {stat.value}
-              </div>
+              <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-2">{stat.value}</div>
               <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
             </div>
           ))}
