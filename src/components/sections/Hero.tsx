@@ -42,7 +42,7 @@ export function Hero() {
         <div className="hero-content max-w-4xl mx-auto space-y-8">
           {/* Headline */}
           <AnimatedHeading as="h1" className="heading-xl mb-6">
-            A Complete Digital Growth System For Brands Ready To Scale
+            A Complete Digital Growth System for Brands Ready to Scale
           </AnimatedHeading>
 
           {/* Subtext */}

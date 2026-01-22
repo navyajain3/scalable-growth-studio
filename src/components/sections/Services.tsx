@@ -146,7 +146,7 @@ export function Services() {
             </span>
           </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
-            From Idea To Execution, We’ve Got You Covered
+            From Idea to Execution, We’ve Got You Covered
           </AnimatedHeading>
           <p className="body-lg">
             Everything your brand needs to design, launch, and grow, delivered by one aligned team.

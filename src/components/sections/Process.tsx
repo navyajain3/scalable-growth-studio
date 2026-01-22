@@ -11,20 +11,17 @@ const steps = [
   {
     icon: Search,
     title: "Deep Research & Competitive Audit",
-    description:
-      "We analyze your market, competitors, and audience to identify opportunities and inform our strategy.",
+    description: "We analyze your market, competitors, and audience to identify opportunities and inform our strategy.",
   },
   {
     icon: Map,
     title: "Strategy & Roadmap Development",
-    description:
-      "We create a clear, actionable roadmap that aligns with your business objectives and timeline.",
+    description: "We create a clear, actionable roadmap that aligns with your business objectives and timeline.",
   },
   {
     icon: Paintbrush,
     title: "Content Creation & Delivery",
-    description:
-      "Our team crafts and delivers high-quality design, development, and content assets.",
+    description: "Our team crafts and delivers high-quality design, development, and content assets.",
   },
   {
     icon: MessageSquare,
@@ -35,8 +32,7 @@ const steps = [
   {
     icon: Rocket,
     title: "Performance Tracking & Optimization",
-    description:
-      "We monitor results, analyze data, and continuously optimize for better performance.",
+    description: "We monitor results, analyze data, and continuously optimize for better performance.",
   },
 ];
 
@@ -55,14 +51,13 @@ export function Process() {
             A Simple, Smart, and Scalable Way to Build
           </AnimatedHeading>
           <p className="body-lg">
-            Everything your brand needs to design, launch, and grow, delivered
-            by one aligned team.
+            Everything your brand needs to design, launch, and grow, delivered by one aligned team.
           </p>
         </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {steps.map((step, index) => (
+          {steps.map((step, index) => (
             <div
               key={index}
               className="p-6 rounded-2xl bg-card border border-border/40 
@@ -80,14 +75,10 @@ export function Process() {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-medium text-foreground mb-2">
-                {step.title}
-              </h3>
+              <h3 className="text-lg font-medium text-foreground mb-2">{step.title}</h3>
 
               {/* Description */}
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {step.description}
-              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

@@ -22,9 +22,7 @@ export function Insights() {
               Insights
             </span>
           </div>
-          <h2 className="heading-lg mb-4">
-            Latest thoughts from the studio
-          </h2>
+          <h2 className="heading-lg mb-4">Latest Thoughts from the Studio</h2>
           <p className="body-lg text-muted-foreground">
             Explore our perspectives on design, growth, and building brands that last.
           </p>
@@ -32,44 +30,36 @@ export function Insights() {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {articles.map((article, index) => (
-          <Link
-            key={article.id}
-            to={`/blog/${article.id}`}
-            className="group animate-fade-in [animation-fill-mode:backwards]"
-            style={{ animationDelay: `${0.08 * (index + 1)}s` }}
-          >
-            {/* Unified Card Tile */}
-            <div className="rounded-2xl bg-muted/30 backdrop-blur-sm border border-border/30 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
-              {/* Image */}
-              <div 
-                className={`aspect-[4/3] ${cardBackgrounds[index % cardBackgrounds.length]}`}
-              >
-                {article.image ? (
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    {/* Abstract placeholder icon/shape could go here */}
-                  </div>
-                )}
-              </div>
+          {articles.map((article, index) => (
+            <Link
+              key={article.id}
+              to={`/blog/${article.id}`}
+              className="group animate-fade-in [animation-fill-mode:backwards]"
+              style={{ animationDelay: `${0.08 * (index + 1)}s` }}
+            >
+              {/* Unified Card Tile */}
+              <div className="rounded-2xl bg-muted/30 backdrop-blur-sm border border-border/30 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
+                {/* Image */}
+                <div className={`aspect-[4/3] ${cardBackgrounds[index % cardBackgrounds.length]}`}>
+                  {article.image ? (
+                    <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      {/* Abstract placeholder icon/shape could go here */}
+                    </div>
+                  )}
+                </div>
 
-              {/* Content */}
-              <div className="p-4">
-                <span className="text-sm text-muted-foreground block mb-2">
-                  {article.domain}
-                </span>
-                <h3 className="text-lg font-medium group-hover:text-violet-500 transition-colors leading-snug">
-                  {article.title}
-                </h3>
+                {/* Content */}
+                <div className="p-4">
+                  <span className="text-sm text-muted-foreground block mb-2">{article.domain}</span>
+                  <h3 className="text-lg font-medium group-hover:text-violet-500 transition-colors leading-snug">
+                    {article.title}
+                  </h3>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
         </div>
       </div>
     </section>

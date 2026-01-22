@@ -60,7 +60,7 @@ export function WhoWeHelp() {
             </span>
           </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
-            Empowering Bold Ideas Across Industries
+            Empowering Bold Ideas across Industries
           </AnimatedHeading>
           <p className="body-lg text-muted-foreground">
             We partner with ambitious teams and leaders to design digital identities that scale with intention,
