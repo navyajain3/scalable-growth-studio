@@ -4,22 +4,22 @@ const audiences = [
   {
     icon: Rocket,
     title: "Startups, Small Businesses & Emerging Brands",
-    description: "Early-stage companies looking to establish their digital presence and scale efficiently.",
+    description: "We help young and growing brands turn ideas into real digital identities that grow fast and look sharp from day one.",
   },
   {
     icon: Building2,
     title: "Established Businesses",
-    description: "Organizations seeking to modernize their digital infrastructure and accelerate growth.",
+    description: "We partner with growing companies to bring their digital presence, design, and marketing to the level they deserve.",
   },
   {
     icon: ShoppingBag,
     title: "E-commerce & D2C Brands",
-    description: "Direct-to-consumer brands focused on conversion optimization and customer experience.",
+    description: "We create experiences that attract customers, drive conversions, and strengthen long-term brand presence.",
   },
   {
     icon: User,
     title: "Founders & CxOs",
-    description: "Leaders who need strategic partners to translate vision into digital reality.",
+    description: "We work directly with leaders to shape their personal brands, refine their online presence, and grow their influence through social media.",
   },
 ];
 
