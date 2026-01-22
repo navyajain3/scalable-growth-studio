@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
 
-// Placeholder gradient backgrounds for article cards
+// Placeholder gradient backgrounds for article cards (violet to magenta theme)
 const cardBackgrounds = [
   "bg-gradient-to-br from-cyan-100 via-pink-100 to-rose-100",
   "bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100",
-  "bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100",
+  "bg-gradient-to-br from-[hsl(262_80%_88%)] via-[hsl(277_80%_88%)] to-[hsl(292_80%_88%)]",
   "bg-gradient-to-br from-orange-100 via-rose-100 to-pink-100",
-  "bg-gradient-to-br from-violet-100 via-pink-100 to-rose-100",
-  "bg-gradient-to-br from-pink-100 via-violet-100 to-blue-100",
+  "bg-gradient-to-br from-[hsl(262_80%_88%)] via-pink-100 to-rose-100",
+  "bg-gradient-to-br from-pink-100 via-[hsl(277_80%_88%)] to-[hsl(262_80%_88%)]",
 ];
 
 export function Insights() {
