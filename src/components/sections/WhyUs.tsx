@@ -39,9 +39,15 @@ export function WhyUs() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            Why ScalKit
+          </span>
           <h2 className="heading-lg mb-4">
             We don't just work for your brand, we grow it with you.
           </h2>
+          <p className="body-lg text-muted-foreground">
+            Here's what makes working with us different.
+          </p>
         </div>
 
         {/* Reasons Grid */}

@@ -29,9 +29,15 @@ export function Insights() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            Insights
+          </span>
           <h2 className="heading-lg mb-4">
             Latest thoughts from the studio
           </h2>
+          <p className="body-lg text-muted-foreground">
+            Explore our perspectives on design, growth, and building brands that last.
+          </p>
         </div>
 
         {/* Articles List */}
