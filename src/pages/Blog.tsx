@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { articles } from "@/data/articles";
@@ -7,6 +8,10 @@ import { Footer } from "@/components/Footer";
 export default function Blog() {
   const { id } = useParams<{ id: string }>();
   const article = articles.find((a) => a.id === id);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!article) {
     return (
