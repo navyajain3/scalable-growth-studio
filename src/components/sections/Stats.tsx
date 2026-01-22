@@ -60,7 +60,7 @@ export function Stats() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.author}
-                className="glow-card glow-border p-7 min-w-[350px] md:min-w-[400px] flex-shrink-0"
+                className="glow-card glow-border p-7 w-[320px] flex-shrink-0"
               >
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
@@ -83,7 +83,7 @@ export function Stats() {
             {testimonials.map((testimonial) => (
               <div
                 key={`${testimonial.author}-duplicate`}
-                className="glow-card glow-border p-7 min-w-[350px] md:min-w-[400px] flex-shrink-0"
+                className="glow-card glow-border p-7 w-[320px] flex-shrink-0"
               >
                 {/* Stars */}
                 <div className="flex gap-1 mb-4">
