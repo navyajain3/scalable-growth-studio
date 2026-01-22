@@ -77,9 +77,6 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
     >
       {/* Text Content */}
       <div className={`space-y-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
-        <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30 text-foreground text-sm font-medium">
-          {service.badge}
-        </span>
         <h3 className="heading-md">{service.title}</h3>
         <p className="body-md">{service.description}</p>
         <div className="flex flex-wrap gap-2 pt-2">
