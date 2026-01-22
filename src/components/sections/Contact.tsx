@@ -86,10 +86,6 @@ export function Contact() {
           {/* Right Column - Form */}
           <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <div className="glow-card p-8 md:p-10">
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-2">Send us a message</h3>
-                <p className="text-muted-foreground text-sm">Please fill out the form below, and our team will get in touch with you at the earliest.</p>
-              </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div>
