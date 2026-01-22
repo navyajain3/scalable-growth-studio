@@ -68,7 +68,7 @@ export function Stats() {
 
         {/* Testimonials Marquee */}
         <div className="overflow-hidden">
-          <div className="flex gap-6 animate-marquee">
+          <div className="flex gap-6 animate-marquee-fast md:animate-marquee">
             {/* Original testimonials */}
             {testimonials.map((testimonial) => (
               <div
