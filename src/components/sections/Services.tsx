@@ -40,7 +40,7 @@ const services = [
     badge: "Growth",
     title: "Strategy & Growth",
     description: "Data-driven strategies that accelerate your business growth and market position. We analyze, plan, and execute to maximize your ROI.",
-    tags: ["Analytics", "SEO", "Performance"],
+    tags: ["Analytics", "Marketing & Outreach Strategy", "Performance"],
     image: serviceStrategy,
   },
   {
