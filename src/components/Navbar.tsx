@@ -84,7 +84,7 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button variant="default" className="mt-4" asChild>
+            <Button variant="default" size="default" className="mt-4" asChild>
               <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                 Book a Call
               </a>
