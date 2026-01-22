@@ -25,7 +25,7 @@ export function Footer() {
           <div>
             <span className="text-xl font-semibold block mb-3">ScalKit</span>
             <p className="text-muted-foreground text-sm">
-              Building brands that scale.
+              A Complete Digital Growth System for Brands Ready to Scale.
             </p>
           </div>
 

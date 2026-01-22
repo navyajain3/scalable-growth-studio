@@ -119,12 +119,6 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
 
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-            {/* Floating animation indicator */}
-            <div className="absolute bottom-4 right-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-sm text-xs font-medium opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Interactive
-            </div>
           </div>
         </div>
       </div>
