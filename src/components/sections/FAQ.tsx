@@ -1,30 +1,30 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
   {
-    question: "What industries do you work with?",
-    answer: "We work across diverse industries including technology, e-commerce, healthcare, finance, education, and professional services. Our approach is tailored to each industry's unique challenges and opportunities.",
+    question: "What industries do you specialize in?",
+    answer:
+      "We work across a range of industries including tech, wellness, healthcare, education, real estate, finance, entertainment, and retail. While our experience spans sectors, every project is led by specialists who take the time to deeply understand your market, audience, and competitive landscape before execution begins.",
   },
   {
-    question: "What are your typical project timelines?",
-    answer: "Timelines vary based on project scope. A brand identity typically takes 4-6 weeks, a website 6-10 weeks, and comprehensive digital transformation projects 3-6 months. We'll provide a detailed timeline during our discovery phase.",
+    question: "How long does a typical project take?",
+    answer:
+      "Timelines vary based on scope, complexity, and collaboration, but most projects are completed within 2–6 weeks. We define clear milestones upfront so expectations are aligned from day one and progress stays predictable throughout the engagement.",
   },
   {
     question: "Can I hire you for a single service?",
-    answer: "Absolutely. While we offer comprehensive solutions, we're happy to work on individual services like website development, branding, or content strategy based on your specific needs.",
+    answer:
+      "Absolutely. You don’t need to commit to a full suite of services. We integrate seamlessly with your existing team and take ownership of exactly what you need, whether that’s design, content, development, or strategy, without unnecessary layers or long-term commitments.",
   },
   {
-    question: "How does pricing work?",
-    answer: "We offer project-based pricing tailored to scope and complexity. After our initial discovery call, we provide a detailed proposal with transparent pricing. We also offer retainer packages for ongoing partnerships.",
+    question: "How are projects priced, and do you offer ongoing support?",
+    answer:
+      "Every project is scoped intentionally based on your goals and requirements, with clear, upfront pricing before we begin. Ongoing support isn’t bundled by default, it’s discussed transparently based on what you need post-launch. For brands seeking continued momentum, we offer flexible monthly partnerships that cover optimization, updates, maintenance, and creative support.",
   },
   {
-    question: "Why should I choose ScalKit over an in-house team?",
-    answer: "ScalKit provides access to a full spectrum of expertise—design, development, strategy, and content—without the overhead of hiring multiple full-time specialists. You get a dedicated team that scales with your needs while we handle execution, so you can focus on running your business.",
+    question: "Why should I choose ScalKit over building an in-house team?",
+    answer:
+      "Our clients value senior expertise without the overhead of hiring full-time. Instead of managing multiple roles or paying for downtime, they get access to experienced designers, developers, and strategists, exactly when they need it, and always aligned to clear outcomes.",
   },
 ];
 
@@ -37,12 +37,8 @@ export function FAQ() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             FAQ
           </span>
-          <h2 className="heading-lg mb-4">
-            Got Questions? We've Got You Covered
-          </h2>
-          <p className="body-lg text-muted-foreground">
-            Everything you need to know before we get started.
-          </p>
+          <h2 className="heading-lg mb-4">Got Questions? We've Got You Covered</h2>
+          <p className="body-lg text-muted-foreground">Everything you need to know before we get started.</p>
         </div>
 
         {/* Accordion */}
@@ -58,9 +54,7 @@ export function FAQ() {
                 <AccordionTrigger className="text-left text-base font-medium hover:no-underline py-5">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5">
-                  {faq.answer}
-                </AccordionContent>
+                <AccordionContent className="text-muted-foreground pb-5">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
