@@ -30,41 +30,44 @@ export function Insights() {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {articles.map((article, index) => (
-            <Link
-              key={article.id}
-              to={`/blog/${article.id}`}
-              className="group flex flex-col animate-fade-in [animation-fill-mode:backwards]"
-              style={{ animationDelay: `${0.08 * (index + 1)}s` }}
-            >
-            {/* Image Container */}
-            <div 
-              className={`aspect-[4/3] rounded-2xl overflow-hidden ${cardBackgrounds[index % cardBackgrounds.length]} transition-transform duration-300 group-hover:scale-[1.02]`}
-            >
-              {article.image ? (
-                <img 
-                  src={article.image} 
-                  alt={article.title}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  {/* Abstract placeholder icon/shape could go here */}
-                </div>
-              )}
-            </div>
+        {articles.map((article, index) => (
+          <Link
+            key={article.id}
+            to={`/blog/${article.id}`}
+            className="group animate-fade-in [animation-fill-mode:backwards]"
+            style={{ animationDelay: `${0.08 * (index + 1)}s` }}
+          >
+            {/* Unified Card Tile */}
+            <div className="rounded-2xl bg-muted/30 backdrop-blur-sm border border-border/30 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
+              {/* Image */}
+              <div 
+                className={`aspect-[4/3] ${cardBackgrounds[index % cardBackgrounds.length]}`}
+              >
+                {article.image ? (
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    {/* Abstract placeholder icon/shape could go here */}
+                  </div>
+                )}
+              </div>
 
-            {/* Content Tile */}
-            <div className="mt-4 p-4 rounded-xl bg-muted/30 backdrop-blur-sm border border-border/30">
-              <span className="text-sm text-muted-foreground block mb-2">
-                {article.domain}
-              </span>
-              <h3 className="text-lg font-medium group-hover:text-primary transition-colors leading-snug">
-                {article.title}
-              </h3>
+              {/* Content */}
+              <div className="p-4">
+                <span className="text-sm text-muted-foreground block mb-2">
+                  {article.domain}
+                </span>
+                <h3 className="text-lg font-medium group-hover:text-primary transition-colors leading-snug">
+                  {article.title}
+                </h3>
+              </div>
             </div>
           </Link>
-          ))}
+        ))}
         </div>
       </div>
     </section>
