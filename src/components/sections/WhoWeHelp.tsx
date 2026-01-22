@@ -3,6 +3,7 @@ import startupsVisual from "@/assets/who-we-help-startups.jpg";
 import enterpriseVisual from "@/assets/who-we-help-enterprise.jpg";
 import ecommerceVisual from "@/assets/who-we-help-ecommerce.jpg";
 import foundersVisual from "@/assets/who-we-help-founders.jpg";
+import defaultVisual from "@/assets/who-we-help-default.jpg";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 
 const audiences = [
@@ -33,7 +34,7 @@ const audiences = [
 ];
 
 export function WhoWeHelp() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -103,37 +104,45 @@ export function WhoWeHelp() {
         </div>
 
         {/* Desktop: Side-by-side layout */}
-        <div className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+        <div 
+          className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-start"
+          onMouseLeave={() => setActiveIndex(null)}
+        >
           {/* Left Column - Audience Blocks */}
           <div>
-            {audiences.map((item, index) => (
-              <div
-                key={item.title}
-                className={`py-8 border-b border-border/30 last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up`}
-                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-                onMouseEnter={() => setActiveIndex(index)}
-                onClick={() => setActiveIndex(index)}
-              >
-                <h3
-                  className={`font-heading mb-3 transition-all duration-300 ${
-                    activeIndex === index 
-                      ? "text-2xl font-medium text-foreground" 
-                      : "text-xl font-normal text-muted-foreground/60"
-                  }`}
+            {audiences.map((item, index) => {
+              const isActive = activeIndex === index;
+              const isDefault = activeIndex === null;
+              const isHighlighted = isActive || isDefault;
+              
+              return (
+                <div
+                  key={item.title}
+                  className={`py-8 border-b border-border/30 last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up`}
+                  style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+                  onMouseEnter={() => setActiveIndex(index)}
                 >
-                  {item.title}
-                </h3>
-                <p
-                  className={`text-base leading-relaxed transition-all duration-300 ${
-                    activeIndex === index 
-                      ? "text-foreground/90" 
-                      : "text-muted-foreground/50"
-                  }`}
-                >
-                  {item.description}
-                </p>
-              </div>
-            ))}
+                  <h3
+                    className={`font-heading mb-3 transition-all duration-300 ${
+                      isHighlighted 
+                        ? "text-2xl font-medium text-foreground" 
+                        : "text-xl font-normal text-muted-foreground/40"
+                    }`}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    className={`text-base leading-relaxed transition-all duration-300 ${
+                      isHighlighted 
+                        ? "text-foreground/80" 
+                        : "text-muted-foreground/30"
+                    }`}
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
 
           {/* Right Column - Visual */}
@@ -144,6 +153,16 @@ export function WhoWeHelp() {
 
               {/* Image Container */}
               <div className="relative rounded-2xl overflow-hidden border border-border/50">
+                {/* Default image when nothing is hovered */}
+                <img
+                  src={defaultVisual}
+                  alt="Our services overview"
+                  className={`w-full h-auto object-cover transition-opacity duration-500 ${
+                    activeIndex === null ? "opacity-100 relative" : "opacity-0 absolute inset-0"
+                  }`}
+                />
+                
+                {/* Individual audience images */}
                 {audiences.map((item, index) => (
                   <img
                     key={item.title}
