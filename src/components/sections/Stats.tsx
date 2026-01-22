@@ -143,7 +143,7 @@ export function Stats() {
               {testimonials.map((testimonial) => (
                 <div
                   key={testimonial.author}
-                  className="glow-card glow-border p-7 w-[280px] md:w-[320px] flex-shrink-0"
+                  className="liquid-glass p-7 w-[280px] md:w-[320px] flex-shrink-0"
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -163,7 +163,7 @@ export function Stats() {
               {testimonials.map((testimonial) => (
                 <div
                   key={`${testimonial.author}-dup`}
-                  className="glow-card glow-border p-7 w-[280px] md:w-[320px] flex-shrink-0"
+                  className="liquid-glass p-7 w-[280px] md:w-[320px] flex-shrink-0"
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
