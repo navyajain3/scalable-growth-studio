@@ -1,27 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
-
-const articles = [
-  {
-    title: "Why People Leave Your Website in 10 Seconds",
-    category: "UX Design",
-  },
-  {
-    title: "The Untapped Goldmine: LinkedIn",
-    category: "Marketing",
-  },
-  {
-    title: "Psychology of Selling on Instagram",
-    category: "Social Media",
-  },
-  {
-    title: "Why People Trust Founders More Than Brands",
-    category: "Branding",
-  },
-  {
-    title: "How AI Is Changing the Way We Design",
-    category: "Technology",
-  },
-];
+import { Link } from "react-router-dom";
+import { articles } from "@/data/articles";
 
 export function Insights() {
   return (
@@ -40,25 +19,41 @@ export function Insights() {
           </p>
         </div>
 
-        {/* Articles List */}
-        <div className="max-w-3xl mx-auto divide-y divide-border">
+        {/* Articles Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {articles.map((article, index) => (
-            <a
-              key={article.title}
-              href="#"
-              className="group flex items-center justify-between py-6 hover:px-4 transition-all duration-300 opacity-0 animate-slide-up"
+            <Link
+              key={article.id}
+              to={`/blog/${article.id}`}
+              className="group glow-card glow-border hover-lift p-6 flex flex-col animate-fade-in [animation-fill-mode:backwards]"
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
-              <div>
+              {/* Category & Read Time */}
+              <div className="flex items-center justify-between mb-4">
                 <span className="text-xs text-primary font-medium uppercase tracking-wider">
                   {article.category}
                 </span>
-                <h3 className="text-lg font-medium mt-1 group-hover:text-primary transition-colors">
-                  {article.title}
-                </h3>
+                <span className="text-xs text-muted-foreground">
+                  {article.readTime}
+                </span>
               </div>
-              <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-            </a>
+
+              {/* Title */}
+              <h3 className="text-lg font-medium mb-3 group-hover:text-primary transition-colors leading-snug">
+                {article.title}
+              </h3>
+
+              {/* Excerpt */}
+              <p className="text-sm text-muted-foreground mb-6 line-clamp-2 flex-1">
+                {article.excerpt}
+              </p>
+
+              {/* Read More */}
+              <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors mt-auto">
+                Read article
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </div>
+            </Link>
           ))}
         </div>
       </div>
