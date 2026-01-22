@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 const faqs = [
   {
@@ -37,7 +38,9 @@ export function FAQ() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             FAQ
           </span>
-          <h2 className="heading-lg mb-4">Got Questions? We've Got You Covered</h2>
+          <AnimatedHeading as="h2" className="heading-lg mb-4">
+            Got Questions? We've Got You Covered
+          </AnimatedHeading>
           <p className="body-lg text-muted-foreground">Everything you need to know before we get started.</p>
         </div>
 

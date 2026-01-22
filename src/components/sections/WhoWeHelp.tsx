@@ -5,6 +5,7 @@ import ecommerceVisual from "@/assets/who-we-help-ecommerce.jpg";
 import foundersVisual from "@/assets/who-we-help-founders.jpg";
 import defaultVisual from "@/assets/who-we-help-default.jpg";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 const audiences = [
   {
@@ -56,7 +57,9 @@ export function WhoWeHelp() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Who We Help
           </span>
-          <h2 className="heading-lg mb-4">Empowering bold ideas across industries.</h2>
+          <AnimatedHeading as="h2" className="heading-lg mb-4">
+            Empowering bold ideas across industries.
+          </AnimatedHeading>
           <p className="body-lg text-muted-foreground">
             We partner with ambitious teams and leaders to design digital identities that scale with intention,
             strategy, and long-term impact.

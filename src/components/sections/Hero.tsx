@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { ArrowRight } from "lucide-react";
 import { useHeroParallax } from "@/hooks/useGSAPScrollAnimations";
 
@@ -32,9 +33,9 @@ export function Hero() {
       <div className="container-wide relative z-10 text-center pt-20">
         <div className="hero-content max-w-4xl mx-auto space-y-8">
           {/* Headline */}
-          <h1 className="heading-xl opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <AnimatedHeading as="h1" className="heading-xl mb-6">
             A Complete Digital Growth System for Brands Ready to Scale.
-          </h1>
+          </AnimatedHeading>
 
           {/* Subtext */}
           <p className="body-lg max-w-2xl mx-auto opacity-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>

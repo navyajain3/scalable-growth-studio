@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 const stats = [
   { value: 85, suffix: "+", label: "Brands scaled with us" },
@@ -121,7 +122,9 @@ export function Stats() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Testimonials
           </span>
-          <h2 className="heading-lg mb-4">Trusted by ambitious brands worldwide.</h2>
+          <AnimatedHeading as="h2" className="heading-lg mb-4">
+            Trusted by ambitious brands worldwide.
+          </AnimatedHeading>
           <p className="body-lg text-muted-foreground">Real feedback from founders and teams we’ve partnered with.</p>
         </div>
 

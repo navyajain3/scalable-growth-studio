@@ -1,4 +1,5 @@
 import { Users, Lightbulb, Target, Handshake, Zap, Award } from "lucide-react";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 const reasons = [
   {
@@ -48,7 +49,9 @@ export function WhyUs() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Why Us
           </span>
-          <h2 className="heading-lg mb-4">We don't just work for your brand, we grow it with you.</h2>
+          <AnimatedHeading as="h2" className="heading-lg mb-4">
+            We don't just work for your brand, we grow it with you.
+          </AnimatedHeading>
           <p className="body-lg text-muted-foreground">
             Our approach is built on clarity, partnership, and measurable outcomes, not shortcuts or surface-level
             growth.

@@ -1,4 +1,5 @@
 import { Telescope, Search, Map, Paintbrush, MessageSquare, Rocket } from "lucide-react";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 const steps = [
   {
@@ -48,9 +49,9 @@ export function Process() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Our Process
           </span>
-          <h2 className="heading-lg mb-4">
+          <AnimatedHeading as="h2" className="heading-lg mb-4">
             A Simple, Smart, and Scalable Way to Build
-          </h2>
+          </AnimatedHeading>
           <p className="body-lg">
             Everything your brand needs to design, launch, and grow, delivered
             by one aligned team.
