@@ -25,6 +25,14 @@ const services = [
     image: serviceUiUx,
   },
   {
+    badge: "Graphics",
+    title: "Graphic Design",
+    description:
+      "From social posts to pitch decks, we create designs that look stunning and speak your brand's language.",
+    tags: ["Social Media", "Pitch Decks", "Marketing Materials"],
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&auto=format&fit=crop&q=80",
+  },
+  {
     badge: "Brand Identity",
     title: "Branding & Marketing",
     description:
