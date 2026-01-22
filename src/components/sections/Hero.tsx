@@ -9,22 +9,22 @@ export function Hero() {
     <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Subtle Gradient Background */}
       <div className="absolute inset-0 bg-background">
-        {/* Main gradient overlay - subtle neutral */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--hero-gradient-start))] via-transparent to-[hsl(var(--hero-gradient-end))] opacity-50" />
+        {/* Main gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--hero-gradient-start))] via-transparent to-[hsl(var(--hero-gradient-end))] opacity-40 dark:opacity-30" />
         
-        {/* Soft center glow - neutral */}
-        <div className="hero-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] opacity-20 dark:opacity-10">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[hsl(0_0%_50%/0.2)] via-[hsl(0_0%_40%/0.1)] to-[hsl(0_0%_50%/0.2)] blur-3xl" />
+        {/* Soft center glow */}
+        <div className="hero-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] opacity-25 dark:opacity-15">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[hsl(280_40%_70%/0.3)] via-[hsl(220_30%_70%/0.2)] to-[hsl(190_50%_70%/0.3)] blur-3xl animate-glow-pulse" />
         </div>
         
-        {/* Accent gradient top-right - subtle */}
-        <div className="absolute -top-20 -right-20 w-[500px] h-[500px] opacity-10 dark:opacity-5">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[hsl(0_0%_60%)] to-transparent blur-3xl" />
+        {/* Accent gradient top-right */}
+        <div className="absolute -top-20 -right-20 w-[500px] h-[500px] opacity-20 dark:opacity-10">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[hsl(190_60%_70%)] to-transparent blur-3xl" />
         </div>
         
-        {/* Accent gradient bottom-left - subtle */}
-        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] opacity-10 dark:opacity-5">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[hsl(0_0%_50%)] to-transparent blur-3xl" />
+        {/* Accent gradient bottom-left */}
+        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] opacity-20 dark:opacity-10">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[hsl(280_40%_70%)] to-transparent blur-3xl" />
         </div>
       </div>
 
