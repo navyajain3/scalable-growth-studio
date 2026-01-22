@@ -115,6 +115,29 @@ export function Stats() {
                 </div>
               </div>
             ))}
+            {/* Third set for extra smooth looping */}
+            {testimonials.map((testimonial) => (
+              <div
+                key={`${testimonial.author}-duplicate-2`}
+                className="glow-card glow-border p-7 w-[320px] flex-shrink-0"
+              >
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>
+
+                {/* Author */}
+                <div>
+                  <div className="font-medium text-foreground">{testimonial.author}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
