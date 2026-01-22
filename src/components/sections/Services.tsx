@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useServicesParallax } from "@/hooks/useGSAPScrollAnimations";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
-import serviceWebDev from "@/assets/service-web-dev.jpg";
+import serviceWebDev from "@/assets/service-web-dev-new.png";
 import serviceUiUx from "@/assets/service-ui-ux.jpg";
 import serviceBranding from "@/assets/service-branding.jpg";
 import serviceContent from "@/assets/service-content.jpg";
