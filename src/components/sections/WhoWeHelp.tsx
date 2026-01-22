@@ -54,7 +54,7 @@ export function WhoWeHelp() {
       <div className="container-wide">
         {/* Section Header - Centered */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30 text-foreground text-sm font-medium mb-6">
             Who We Help
           </span>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
@@ -98,7 +98,7 @@ export function WhoWeHelp() {
                 key={index}
                 onClick={() => api?.scrollTo(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index ? "w-6 bg-primary" : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  current === index ? "w-6 bg-gradient-to-r from-violet-500 to-purple-500" : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -156,7 +156,7 @@ export function WhoWeHelp() {
           <div className="sticky top-32 flex items-center justify-center">
             <div className="relative w-full max-w-lg">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-transparent to-purple-500/10 rounded-3xl blur-3xl transition-opacity duration-500" />
 
               {/* Image Container */}
               <div className="relative rounded-2xl overflow-hidden border border-border/50">

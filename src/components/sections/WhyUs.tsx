@@ -46,7 +46,7 @@ export function WhyUs() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30 text-foreground text-sm font-medium mb-6">
             Why Us
           </span>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
@@ -66,8 +66,8 @@ export function WhyUs() {
               className="glow-card glow-border p-7 hover-lift opacity-0 animate-slide-up"
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
-              <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
-                <reason.icon className="w-5 h-5 text-primary" />
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 flex items-center justify-center mb-5">
+                <reason.icon className="w-5 h-5 text-violet-500" />
               </div>
               <h3 className="text-lg font-medium mb-2">{reason.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{reason.description}</p>
