@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Phone, Linkedin, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -25,12 +25,20 @@ export function Footer() {
               <Phone className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/company/scalkit"
+              href="https://www.linkedin.com/in/navyaj/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Linkedin className="w-5 h-5" />
+            </a>
+            <a
+              href="https://wa.me/+918882217810"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <MessageCircle className="w-5 h-5" />
             </a>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Phone, Linkedin, MessageCircle } from "lucide-react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 export function Contact() {
@@ -57,7 +57,7 @@ export function Contact() {
                 <span>+91 88822 17810</span>
               </a>
               <a
-                href="https://in.linkedin.com/in/navyaj"
+                href="https://www.linkedin.com/in/navyaj/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group"
@@ -66,6 +66,17 @@ export function Contact() {
                   <Linkedin className="w-5 h-5 text-primary" />
                 </div>
                 <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://wa.me/+918882217810"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <MessageCircle className="w-5 h-5 text-primary" />
+                </div>
+                <span>WhatsApp</span>
               </a>
             </div>
           </div>
