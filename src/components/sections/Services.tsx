@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useServicesParallax } from "@/hooks/useGSAPScrollAnimations";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 import serviceWebDev from "@/assets/service-web-dev.jpg";
 import serviceUiUx from "@/assets/service-ui-ux.jpg";
 import serviceBranding from "@/assets/service-branding.jpg";
@@ -142,7 +143,9 @@ export function Services() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Our Services
           </span>
-          <h2 className="heading-lg mb-4">From idea to execution, we've got you covered.</h2>
+          <AnimatedHeading as="h2" className="heading-lg mb-4">
+            From idea to execution, we've got you covered.
+          </AnimatedHeading>
           <p className="body-lg">
             Everything your brand needs to design, launch, and grow, delivered by one aligned team.
           </p>

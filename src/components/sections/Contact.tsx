@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Linkedin } from "lucide-react";
+import { AnimatedHeading } from "@/components/ui/animated-heading";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -28,9 +29,9 @@ export function Contact() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
               Get in Touch
             </span>
-            <h2 className="heading-lg mb-6">
+            <AnimatedHeading as="h2" className="heading-lg mb-6">
               Let's build something that scales.
-            </h2>
+            </AnimatedHeading>
             <p className="body-lg mb-10">
               Ready to transform your digital presence? Get in touch and let's discuss how we can help your brand grow.
             </p>
