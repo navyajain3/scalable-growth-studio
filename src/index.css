@@ -179,11 +179,11 @@
   .dark .aurora-bg {
     background: linear-gradient(
       -45deg,
-      hsl(280 60% 50% / 0.18),
-      hsl(260 50% 55% / 0.12),
-      hsl(290 55% 45% / 0.15),
-      hsl(270 45% 50% / 0.12),
-      hsl(280 60% 50% / 0.18)
+      hsl(280 60% 50% / 0.06),
+      hsl(260 50% 55% / 0.04),
+      hsl(290 55% 45% / 0.05),
+      hsl(270 45% 50% / 0.04),
+      hsl(280 60% 50% / 0.06)
     );
     background-size: 400% 400%;
     animation: aurora 15s ease-in-out infinite;
