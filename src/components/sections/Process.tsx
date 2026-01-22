@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useProcessParallax } from "@/hooks/useGSAPScrollAnimations";
 import processDiscovery from "@/assets/process-discovery.jpg";
 import processResearch from "@/assets/process-research.jpg";
 import processStrategy from "@/assets/process-strategy.jpg";
@@ -83,7 +84,7 @@ function ProcessCard({ step, index }: { step: typeof steps[0]; index: number }) 
           <img
             src={step.image}
             alt={step.title}
-            className={`w-full h-auto object-cover transition-transform duration-700 ${
+            className={`process-image w-full h-auto object-cover transition-transform duration-700 ${
               isHovered ? "scale-105" : "scale-100"
             }`}
           />
@@ -101,6 +102,8 @@ function ProcessCard({ step, index }: { step: typeof steps[0]; index: number }) 
 }
 
 export function Process() {
+  useProcessParallax();
+
   return (
     <section id="process" className="section-padding bg-secondary/30">
       <div className="container-wide">

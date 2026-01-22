@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useServicesParallax } from "@/hooks/useGSAPScrollAnimations";
 import serviceWebDev from "@/assets/service-web-dev.jpg";
 import serviceUiUx from "@/assets/service-ui-ux.jpg";
 import serviceBranding from "@/assets/service-branding.jpg";
@@ -106,7 +107,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+              className="service-image w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
             />
             
             {/* Overlay Gradient */}
@@ -125,6 +126,8 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 }
 
 export function Services() {
+  useServicesParallax();
+
   return (
     <section id="services" className="section-padding">
       <div className="container-wide">
