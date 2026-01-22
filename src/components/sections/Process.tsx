@@ -11,7 +11,8 @@ const steps = [
   {
     number: "1",
     title: "Onboarding & Discovery",
-    description: "We start by understanding your business, goals, challenges, and vision through in-depth discovery sessions.",
+    description:
+      "We start by understanding your business, goals, challenges, and vision through in-depth discovery sessions.",
     image: processDiscovery,
   },
   {
@@ -35,7 +36,8 @@ const steps = [
   {
     number: "5",
     title: "Feedback & Approvals",
-    description: "We work closely with you through structured feedback loops to ensure everything meets your standards.",
+    description:
+      "We work closely with you through structured feedback loops to ensure everything meets your standards.",
     image: processFeedback,
   },
   {
@@ -46,7 +48,7 @@ const steps = [
   },
 ];
 
-function ProcessCard({ step, index }: { step: typeof steps[0]; index: number }) {
+function ProcessCard({ step, index }: { step: (typeof steps)[0]; index: number }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -78,7 +80,7 @@ function ProcessCard({ step, index }: { step: typeof steps[0]; index: number }) 
             background: "radial-gradient(circle at 50% 50%, hsl(var(--glow-primary) / 0.2), transparent 70%)",
           }}
         />
-        
+
         {/* Image Container */}
         <div className="relative overflow-hidden rounded-xl border border-border/50">
           <img
@@ -88,7 +90,7 @@ function ProcessCard({ step, index }: { step: typeof steps[0]; index: number }) 
               isHovered ? "scale-105" : "scale-100"
             }`}
           />
-          
+
           {/* Subtle overlay */}
           <div
             className={`absolute inset-0 bg-gradient-to-t from-background/30 to-transparent transition-opacity duration-300 ${
@@ -112,11 +114,9 @@ export function Process() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Our Process
           </span>
-          <h2 className="heading-lg mb-4">
-            A Simple, Smart, and Scalable Way to Build
-          </h2>
+          <h2 className="heading-lg mb-4">A Simple, Smart, and Scalable Way to Build</h2>
           <p className="body-lg">
-            We design, develop, and implement solutions that help you work smarter, not harder.
+            Everything your brand needs to design, launch, and grow, delivered by one aligned team.
           </p>
         </div>
 
