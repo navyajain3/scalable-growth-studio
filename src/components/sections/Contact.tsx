@@ -45,10 +45,10 @@ export function Contact() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
-                <span>hello@scalkit.com</span>
+                <span>navya@scalkit.com</span>
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+91 88822 17810"
                 className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -128,9 +128,7 @@ export function Contact() {
                 <Button type="submit" size="lg" className="w-full">
                   Send Message
                 </Button>
-                <p className="text-center text-sm text-muted-foreground">
-                  We'll get back to you within 48 hours.
-                </p>
+                <p className="text-center text-sm text-muted-foreground">We'll get back to you within 48 hours.</p>
               </form>
             </div>
           </div>
