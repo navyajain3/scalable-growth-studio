@@ -101,7 +101,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       </div>
 
       {/* Interactive Image */}
-      <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
+        <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
         <div
           className="relative group"
           onMouseMove={handleMouseMove}
@@ -116,11 +116,11 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
           />
 
           {/* Image Container */}
-          <div className="relative overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
             <img
               src={service.image}
               alt={service.title}
-              className="service-image w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+              className="service-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
 
             {/* Overlay Gradient */}
