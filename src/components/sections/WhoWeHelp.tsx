@@ -60,7 +60,7 @@ export function WhoWeHelp() {
             </span>
           </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
-            Empowering bold ideas across industries.
+            Empowering Bold Ideas Across Industries
           </AnimatedHeading>
           <p className="body-lg text-muted-foreground">
             We partner with ambitious teams and leaders to design digital identities that scale with intention,
@@ -100,7 +100,9 @@ export function WhoWeHelp() {
                 key={index}
                 onClick={() => api?.scrollTo(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index ? "w-6 bg-gradient-to-r from-violet-500 to-purple-500" : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  current === index
+                    ? "w-6 bg-gradient-to-r from-violet-500 to-purple-500"
+                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -109,7 +111,7 @@ export function WhoWeHelp() {
         </div>
 
         {/* Desktop: Side-by-side layout */}
-        <div 
+        <div
           className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-start"
           onMouseLeave={() => setActiveIndex(null)}
         >
@@ -119,7 +121,7 @@ export function WhoWeHelp() {
               const isActive = activeIndex === index;
               const isDefault = activeIndex === null;
               const isHighlighted = isActive || isDefault;
-              
+
               return (
                 <div
                   key={item.title}
@@ -129,7 +131,7 @@ export function WhoWeHelp() {
                 >
                   <h3
                     className={`font-heading mb-3 transition-all duration-300 ${
-                      isActive 
+                      isActive
                         ? "text-2xl font-medium text-foreground"
                         : isDefault
                           ? "text-xl font-normal text-foreground"
@@ -140,7 +142,7 @@ export function WhoWeHelp() {
                   </h3>
                   <p
                     className={`text-base leading-relaxed transition-all duration-300 ${
-                      isActive 
+                      isActive
                         ? "text-foreground/90"
                         : isDefault
                           ? "text-muted-foreground/80"
@@ -170,7 +172,7 @@ export function WhoWeHelp() {
                     activeIndex === null ? "opacity-100 relative" : "opacity-0 absolute inset-0"
                   }`}
                 />
-                
+
                 {/* Individual audience images */}
                 {audiences.map((item, index) => (
                   <img
