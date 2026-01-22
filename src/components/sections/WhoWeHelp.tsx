@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import startupsVisual from "@/assets/who-we-help-startups.jpg";
 import enterpriseVisual from "@/assets/who-we-help-enterprise.jpg";
 import ecommerceVisual from "@/assets/who-we-help-ecommerce.jpg";
 import foundersVisual from "@/assets/who-we-help-founders.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
 
 const audiences = [
   {
@@ -33,6 +39,18 @@ const audiences = [
 
 export function WhoWeHelp() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   return (
     <section className="section-padding bg-background">
@@ -51,14 +69,61 @@ export function WhoWeHelp() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+        {/* Mobile/Tablet: Swipeable Carousel */}
+        <div className="lg:hidden">
+          <Carousel setApi={setApi} opts={{ loop: true }} className="w-full">
+            <CarouselContent>
+              {audiences.map((item, index) => (
+                <CarouselItem key={item.title}>
+                  <div 
+                    className="rounded-2xl overflow-hidden border border-border/50 opacity-0 animate-slide-up"
+                    style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+                  >
+                    <img
+                      src={item.image}
+                      alt={`Visual representing ${item.title}`}
+                      className="w-full aspect-[4/3] object-cover"
+                    />
+                    <div className="p-6">
+                      <h3 className="text-xl font-medium mb-2 text-foreground">
+                        {item.title}
+                      </h3>
+                      <p className="body-md text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+
+          {/* Dot Indicators */}
+          <div className="flex justify-center gap-2 mt-6">
+            {audiences.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index
+                    ? "w-6 bg-primary"
+                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop: Side-by-side layout */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           {/* Left Column - Audience Blocks */}
           <div>
             {audiences.map((item, index) => (
               <div
                 key={item.title}
                 className={`py-6 border-b border-border last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up ${
-                  activeIndex === index ? "lg:bg-secondary/20 lg:-mx-6 lg:px-6 lg:rounded-lg lg:border-transparent" : ""
+                  activeIndex === index ? "bg-secondary/20 -mx-6 px-6 rounded-lg border-transparent" : ""
                 }`}
                 style={{ animationDelay: `${0.1 * (index + 1)}s` }}
                 onMouseEnter={() => setActiveIndex(index)}
@@ -78,25 +143,12 @@ export function WhoWeHelp() {
                 >
                   {item.description}
                 </p>
-
-                {/* Mobile/Tablet Image - Shows inline after each category */}
-                <div 
-                  className={`lg:hidden mt-4 overflow-hidden rounded-xl border border-border/50 transition-all duration-300 ${
-                    activeIndex === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0 border-transparent"
-                  }`}
-                >
-                  <img
-                    src={item.image}
-                    alt={`Visual representing ${item.title}`}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
               </div>
             ))}
           </div>
 
-          {/* Right Column - Visual (Desktop Only) */}
-          <div className="hidden lg:flex lg:sticky lg:top-32 items-center justify-center">
+          {/* Right Column - Visual */}
+          <div className="sticky top-32 flex items-center justify-center">
             <div className="relative w-full max-w-lg">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10 rounded-3xl blur-3xl transition-opacity duration-500" />
