@@ -1,32 +1,38 @@
-import { useState, useEffect } from "react";
+import { Telescope, Search, Map, Paintbrush, MessageSquare, Rocket } from "lucide-react";
 
 const steps = [
   {
+    icon: Telescope,
     title: "Onboarding & Discovery",
     description:
       "We start by understanding your business, goals, challenges, and vision through in-depth discovery sessions.",
   },
   {
+    icon: Search,
     title: "Deep Research & Competitive Audit",
     description:
       "We analyze your market, competitors, and audience to identify opportunities and inform our strategy.",
   },
   {
+    icon: Map,
     title: "Strategy & Roadmap Development",
     description:
       "We create a clear, actionable roadmap that aligns with your business objectives and timeline.",
   },
   {
+    icon: Paintbrush,
     title: "Content Creation & Delivery",
     description:
       "Our team crafts and delivers high-quality design, development, and content assets.",
   },
   {
+    icon: MessageSquare,
     title: "Feedback & Approvals",
     description:
       "We work closely with you through structured feedback loops to ensure everything meets your standards.",
   },
   {
+    icon: Rocket,
     title: "Performance Tracking & Optimization",
     description:
       "We monitor results, analyze data, and continuously optimize for better performance.",
@@ -34,20 +40,6 @@ const steps = [
 ];
 
 export function Process() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  // Auto-scroll every 5 seconds
-  useEffect(() => {
-    if (isPaused) return;
-
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % steps.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [isPaused]);
-
   return (
     <section id="process" className="section-padding bg-secondary/30">
       <div className="container-wide">
@@ -65,56 +57,32 @@ export function Process() {
           </p>
         </div>
 
-        {/* Timeline Container */}
-        <div
-          className="relative"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {/* Horizontal Line */}
-          <div className="absolute top-[7px] left-[8%] right-[8%] h-px bg-border hidden md:block" />
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-2xl bg-card border border-border/40 hover:border-border/60 transition-colors duration-300"
+            >
+              {/* Header: Icon + Number */}
+              <div className="flex justify-between items-start mb-6">
+                <step.icon className="w-8 h-8 text-foreground" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+                  <span className="text-sm font-medium text-foreground">{index + 1}</span>
+                </div>
+              </div>
 
-          {/* Steps Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-4">
-            {steps.map((step, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveIndex(index)}
-                className="flex flex-col items-center text-center group cursor-pointer"
-              >
-                {/* Dot */}
-                <div
-                  className={`rounded-full transition-all duration-300 ${
-                    index === activeIndex
-                      ? "w-4 h-4 bg-foreground ring-2 ring-foreground ring-offset-2 ring-offset-background"
-                      : "w-3 h-3 bg-muted-foreground group-hover:bg-foreground"
-                  }`}
-                />
+              {/* Title */}
+              <h3 className="text-lg font-semibold text-foreground mb-2">
+                {step.title}
+              </h3>
 
-                {/* Title */}
-                <h3
-                  className={`mt-6 text-sm md:text-base font-semibold transition-colors duration-300 ${
-                    index === activeIndex
-                      ? "text-foreground"
-                      : "text-muted-foreground group-hover:text-foreground"
-                  }`}
-                >
-                  {step.title}
-                </h3>
-
-                {/* Description */}
-                <p
-                  className={`mt-2 text-xs md:text-sm transition-colors duration-300 leading-relaxed ${
-                    index === activeIndex
-                      ? "text-muted-foreground"
-                      : "text-muted-foreground/60"
-                  }`}
-                >
-                  {step.description}
-                </p>
-              </button>
-            ))}
-          </div>
+              {/* Description */}
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
