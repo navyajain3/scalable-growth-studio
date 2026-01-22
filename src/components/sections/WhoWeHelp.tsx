@@ -124,18 +124,22 @@ export function WhoWeHelp() {
                 >
                   <h3
                     className={`font-heading mb-3 transition-all duration-300 ${
-                      isHighlighted 
-                        ? "text-2xl font-medium text-foreground" 
-                        : "text-xl font-normal text-muted-foreground/40"
+                      isActive 
+                        ? "text-2xl font-medium text-foreground"
+                        : isDefault
+                          ? "text-xl font-normal text-foreground"
+                          : "text-xl font-normal text-muted-foreground/40"
                     }`}
                   >
                     {item.title}
                   </h3>
                   <p
                     className={`text-base leading-relaxed transition-all duration-300 ${
-                      isHighlighted 
-                        ? "text-foreground/80" 
-                        : "text-muted-foreground/30"
+                      isActive 
+                        ? "text-foreground/90"
+                        : isDefault
+                          ? "text-muted-foreground/80"
+                          : "text-muted-foreground/30"
                     }`}
                   >
                     {item.description}
