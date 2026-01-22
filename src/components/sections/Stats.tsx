@@ -9,28 +9,28 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "ScalKit transformed our digital presence completely. Their strategic approach and execution excellence helped us achieve 3x growth in just 6 months.",
+      "ScalKit truly brought my vision to life with such care and creativity. They built a website that feels warm, elegant, and perfectly me. I felt heard every step of the way, and the end result couldn’t have been more beautiful.",
     author: "Dr. Andrea Herschorn",
     role: "Founder & CEO",
     rating: 5,
   },
   {
     quote:
-      "Working with ScalKit felt like having an extended team. They understood our vision instantly and delivered beyond expectations.",
+      "ScalKit has been an incredible partner to work with. They brought our vision to life with such thoughtfulness and precision. Their design sense, attention to detail, and commitment to excellence made the entire process a joy.",
     author: "Pranav",
     role: "Co-Founder",
     rating: 5,
   },
   {
     quote:
-      "The attention to detail and commitment to quality is unmatched. ScalKit doesn't just deliver projects—they build partnerships.",
+      "Navya was a pleasure to work with. She quickly understood the vision and delivered clear, engaging scripts on time. Professional, creative, and easy to collaborate with.",
     author: "Jugadveer Singh",
     role: "Managing Director",
     rating: 5,
   },
   {
     quote:
-      "From branding to development, every deliverable was polished and professional. ScalKit is now our go-to digital partner.",
+      "Navya and her entire team have been incredibly easy to work with. The results exceeded our expectations, and her design sense is truly commendable. I haven’t worked with a more cooperative, understanding, and skilled team. Highly recommend their services!",
     author: "Rahul K",
     role: "Founder",
     rating: 5,
