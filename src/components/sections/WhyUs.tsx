@@ -4,32 +4,38 @@ const reasons = [
   {
     icon: Users,
     title: "End-to-End Expertise, One Aligned Team",
-    description: "Design, content, development, and strategy work together seamlessly. Our cross-functional team aligns every decision around growth, conversion, and long-term brand strength.",
+    description:
+      "Design, content, development, and strategy work together seamlessly. Our cross-functional team aligns every decision around growth, conversion, and long-term brand strength.",
   },
   {
     icon: Lightbulb,
     title: "Strategy Before Execution",
-    description: "We don’t jump straight into design or content. Every project begins with clarity, defining direction, positioning, and priorities. If the strategy isn’t right, we pause, refine, or say no.",
+    description:
+      "We don’t jump straight into design or content. Every project begins with clarity, defining direction, positioning, and priorities. If the strategy isn’t right, we pause, refine, or say no.",
   },
   {
     icon: Target,
     title: "We Don't Do Generic Growth",
-    description: "We don’t chase vanity metrics or short-term spikes. Our work is built around sustainable growth, brand clarity first, performance second, scale third.",
+    description:
+      "We don’t chase vanity metrics or short-term spikes. Our work is built around sustainable growth, brand clarity first, performance second, scale third.",
   },
   {
     icon: Handshake,
     title: "Fewer Clients, Deeper Partnerships",
-    description: "We intentionally limit active projects so every brand gets senior attention, fast decision-making, and consistent quality, not hand-offs or junior-led execution.",
+    description:
+      "We intentionally limit active projects so every brand gets senior attention, fast decision-making, and consistent quality, not hand-offs or junior-led execution.",
   },
   {
     icon: Zap,
     title: "Fast, Transparent & Truly Collaborative",
-    description: "Clear scopes, honest timelines, and direct communication. We work like a partner, not a vendor, keeping you involved and informed from idea to launch and beyond.",
+    description:
+      "Clear scopes, honest timelines, and direct communication. We work like a partner, not a vendor, keeping you involved and informed from idea to launch and beyond.",
   },
   {
     icon: Award,
     title: "Results That Speak for Themselves",
-    description: "Every project is tied to real business goals. We track performance, refine continuously, and focus on long-term growth and measurable impact.",
+    description:
+      "Every project is tied to real business goals. We track performance, refine continuously, and focus on long-term growth and measurable impact.",
   },
 ];
 
@@ -42,11 +48,10 @@ export function WhyUs() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Why ScalKit
           </span>
-          <h2 className="heading-lg mb-4">
-            We don't just work for your brand, we grow it with you.
-          </h2>
+          <h2 className="heading-lg mb-4">We don't just work for your brand, we grow it with you.</h2>
           <p className="body-lg text-muted-foreground">
-            Here's what makes working with us different.
+            Our approach is built on clarity, partnership, and measurable outcomes, not shortcuts or surface-level
+            growth.
           </p>
         </div>
 
