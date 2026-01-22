@@ -53,31 +53,56 @@ export function Stats() {
           ))}
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={testimonial.author}
-              className="glow-card glow-border p-7 opacity-0 animate-slide-up"
-              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-            >
-              {/* Stars */}
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                ))}
-              </div>
+        {/* Testimonials Marquee */}
+        <div className="overflow-hidden">
+          <div className="flex gap-6 animate-marquee">
+            {/* Original testimonials */}
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.author}
+                className="glow-card glow-border p-7 min-w-[350px] md:min-w-[400px] flex-shrink-0"
+              >
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
+                </div>
 
-              {/* Quote */}
-              <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>
+                {/* Quote */}
+                <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>
 
-              {/* Author */}
-              <div>
-                <div className="font-medium text-foreground">{testimonial.author}</div>
-                <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                {/* Author */}
+                <div>
+                  <div className="font-medium text-foreground">{testimonial.author}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+            {/* Duplicated testimonials for seamless loop */}
+            {testimonials.map((testimonial) => (
+              <div
+                key={`${testimonial.author}-duplicate`}
+                className="glow-card glow-border p-7 min-w-[350px] md:min-w-[400px] flex-shrink-0"
+              >
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>
+
+                {/* Author */}
+                <div>
+                  <div className="font-medium text-foreground">{testimonial.author}</div>
+                  <div className="text-sm text-muted-foreground">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
