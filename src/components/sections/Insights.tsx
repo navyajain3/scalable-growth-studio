@@ -17,7 +17,7 @@ export function Insights() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30 text-foreground text-sm font-medium mb-6">
             Insights
           </span>
           <h2 className="heading-lg mb-4">
@@ -61,7 +61,7 @@ export function Insights() {
                 <span className="text-sm text-muted-foreground block mb-2">
                   {article.domain}
                 </span>
-                <h3 className="text-lg font-medium group-hover:text-primary transition-colors leading-snug">
+                <h3 className="text-lg font-medium group-hover:text-violet-500 transition-colors leading-snug">
                   {article.title}
                 </h3>
               </div>

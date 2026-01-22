@@ -119,7 +119,7 @@ export function Stats() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30 text-foreground text-sm font-medium mb-6">
             Testimonials
           </span>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
@@ -147,7 +147,7 @@ export function Stats() {
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                      <Star key={i} className="w-4 h-4 fill-violet-500 text-violet-500" />
                     ))}
                   </div>
                   <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>
@@ -167,7 +167,7 @@ export function Stats() {
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                      <Star key={i} className="w-4 h-4 fill-violet-500 text-violet-500" />
                     ))}
                   </div>
                   <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>

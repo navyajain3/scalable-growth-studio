@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 hover:shadow-glow-sm",
+        default: "bg-gradient-to-r from-violet-500 to-purple-500 text-white shadow-sm hover:from-violet-600 hover:to-purple-600 hover:shadow-glow-sm",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-        outline: "border border-border bg-transparent text-foreground hover:bg-secondary hover:border-primary/30",
+        outline: "border border-violet-500/30 bg-transparent text-foreground hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10 hover:border-violet-500/50",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "text-foreground hover:bg-secondary hover:text-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground shadow-glow hover:shadow-glow hover:bg-primary/90 hover:-translate-y-0.5 rounded-full",
-        "hero-outline": "border border-border bg-card/50 text-foreground backdrop-blur-sm hover:bg-card hover:border-primary/30 hover:-translate-y-0.5",
-        nav: "bg-primary text-primary-foreground rounded-full hover:bg-primary/90",
+        link: "text-violet-500 underline-offset-4 hover:underline",
+        hero: "bg-gradient-to-r from-violet-500 to-purple-500 text-white shadow-glow hover:from-violet-600 hover:to-purple-600 hover:-translate-y-0.5 rounded-full",
+        "hero-outline": "border border-violet-500/30 bg-card/50 text-foreground backdrop-blur-sm hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10 hover:border-violet-500/50 hover:-translate-y-0.5",
+        nav: "bg-gradient-to-r from-violet-500 to-purple-500 text-white rounded-full hover:from-violet-600 hover:to-purple-600",
       },
       size: {
         default: "h-11 px-6 py-2",
