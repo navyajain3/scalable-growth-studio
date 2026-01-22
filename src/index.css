@@ -166,27 +166,27 @@
   .aurora-bg {
     background: linear-gradient(
       -45deg,
-      hsl(280 60% 55% / 0.25),
-      hsl(260 50% 60% / 0.15),
-      hsl(290 55% 50% / 0.2),
-      hsl(270 45% 55% / 0.15),
-      hsl(280 60% 55% / 0.25)
+      hsl(280 60% 55% / 0.12),
+      hsl(260 50% 60% / 0.08),
+      hsl(290 55% 50% / 0.10),
+      hsl(270 45% 55% / 0.08),
+      hsl(280 60% 55% / 0.12)
     );
     background-size: 400% 400%;
-    animation: aurora 12s ease-in-out infinite;
+    animation: aurora 15s ease-in-out infinite;
   }
 
   .dark .aurora-bg {
     background: linear-gradient(
       -45deg,
-      hsl(280 60% 50% / 0.4),
-      hsl(260 50% 55% / 0.3),
-      hsl(290 55% 45% / 0.35),
-      hsl(270 45% 50% / 0.3),
-      hsl(280 60% 50% / 0.4)
+      hsl(280 60% 50% / 0.18),
+      hsl(260 50% 55% / 0.12),
+      hsl(290 55% 45% / 0.15),
+      hsl(270 45% 50% / 0.12),
+      hsl(280 60% 50% / 0.18)
     );
     background-size: 400% 400%;
-    animation: aurora 12s ease-in-out infinite;
+    animation: aurora 15s ease-in-out infinite;
   }
 
   /* Glow Card Effect */

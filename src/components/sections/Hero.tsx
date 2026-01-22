@@ -11,7 +11,8 @@ export function Hero() {
     <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background with Floating Orbs */}
       <div className="absolute inset-0 bg-background overflow-hidden">
-        {/* Floating Orb 1 - Large center orb */}
+        {/* Subtle Purple Aurora Wave */}
+        <div className="absolute inset-0 aurora-bg opacity-40 dark:opacity-30" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] animate-float-slow">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-muted/40 via-muted/20 to-muted/40 blur-3xl" />
         </div>
