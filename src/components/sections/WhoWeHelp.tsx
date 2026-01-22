@@ -37,53 +37,48 @@ export function WhoWeHelp() {
   return (
     <section className="section-padding bg-background">
       <div className="container-wide">
+        {/* Section Header - Centered */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            Who We Help
+          </span>
+          <h2 className="heading-lg mb-4">
+            Empowering bold ideas across industries.
+          </h2>
+          <p className="body-lg text-muted-foreground">
+            We work with ambitious teams and individuals who want to build
+            strong digital identities and scale with intention.
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-          {/* Left Column - Content */}
+          {/* Left Column - Audience Blocks */}
           <div>
-            {/* Section Badge */}
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              Who We Help
-            </span>
-
-            {/* Main Heading */}
-            <h2 className="heading-lg mb-6">
-              Empowering bold ideas across industries.
-            </h2>
-
-            {/* Intro Text */}
-            <p className="body-lg mb-8">
-              We work with ambitious teams and individuals who want to build
-              strong digital identities and scale with intention.
-            </p>
-
-            {/* Audience Blocks */}
-            <div>
-              {audiences.map((item, index) => (
-                <div
-                  key={item.title}
-                  className={`py-6 border-b border-border last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up ${
-                    activeIndex === index ? "bg-secondary/20 -mx-6 px-6 rounded-lg border-transparent" : ""
+            {audiences.map((item, index) => (
+              <div
+                key={item.title}
+                className={`py-6 border-b border-border last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up ${
+                  activeIndex === index ? "bg-secondary/20 -mx-6 px-6 rounded-lg border-transparent" : ""
+                }`}
+                style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+                onMouseEnter={() => setActiveIndex(index)}
+              >
+                <h3
+                  className={`text-xl font-medium mb-2 transition-colors duration-300 ${
+                    activeIndex === index ? "text-foreground" : "text-muted-foreground"
                   }`}
-                  style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-                  onMouseEnter={() => setActiveIndex(index)}
                 >
-                  <h3
-                    className={`text-xl font-medium mb-2 transition-colors duration-300 ${
-                      activeIndex === index ? "text-foreground" : "text-muted-foreground"
-                    }`}
-                  >
-                    {item.title}
-                  </h3>
-                  <p
-                    className={`body-md transition-colors duration-300 ${
-                      activeIndex === index ? "text-foreground" : "text-muted-foreground"
-                    }`}
-                  >
-                    {item.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+                  {item.title}
+                </h3>
+                <p
+                  className={`body-md transition-colors duration-300 ${
+                    activeIndex === index ? "text-foreground" : "text-muted-foreground"
+                  }`}
+                >
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
 
           {/* Right Column - Visual */}
