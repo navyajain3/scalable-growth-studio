@@ -13,7 +13,7 @@ export interface Article {
 export const articles: Article[] = [
   {
     id: "why-people-leave-your-website",
-    title: "Why People Leave Your Website in 10 Seconds",
+    title: "Why People Leave Your Website in 10 Seconds (and How to Make Them Stay)",
     category: "UX Design",
     domain: "uxdesign.cc",
     excerpt: "First impressions matter. Learn the critical mistakes that drive visitors away and how to fix them.",
@@ -57,7 +57,7 @@ Design with intention. Every element should serve a purpose.
   },
   {
     id: "untapped-goldmine-linkedin",
-    title: "The Untapped Goldmine: LinkedIn",
+    title: "The Untapped Goldmine: How Founders Can Win Big on LinkedIn",
     category: "Marketing",
     domain: "linkedin.com",
     excerpt: "Most businesses ignore LinkedIn's potential. Here's how to leverage it for real growth.",
@@ -100,7 +100,7 @@ LinkedIn isn't saturated—it's underutilized. The businesses that invest in it 
   },
   {
     id: "psychology-of-selling-instagram",
-    title: "Psychology of Selling on Instagram",
+    title: "The Psychology of Selling on Instagram: How to Make People Want What You Offer",
     category: "Social Media",
     domain: "instagram.com",
     excerpt: "Understanding the psychological triggers that turn followers into customers.",
@@ -148,7 +148,7 @@ Remember: you're not just selling a product—you're selling a feeling, an ident
   },
   {
     id: "trust-founders-over-brands",
-    title: "Why People Trust Founders More Than Brands",
+    title: "Why People Trust Founders More Than Brands (and How to Use That)",
     category: "Branding",
     domain: "medium.com",
     excerpt: "The shift from corporate trust to personal trust—and how to leverage it.",
@@ -198,7 +198,7 @@ The companies that will thrive are those that can humanize their brand through f
   },
   {
     id: "ai-changing-design",
-    title: "How AI Is Changing the Way We Design",
+    title: "How AI Is Changing the Way We Design, Write, and Sell Online",
     category: "Technology",
     domain: "designweekly.io",
     excerpt: "AI isn't replacing designers—it's making them more powerful than ever.",
@@ -253,7 +253,7 @@ AI is not the end of design—it's a new beginning.
   },
   {
     id: "building-design-system-from-scratch",
-    title: "Building a Design System From Scratch",
+    title: "How to Build a Design System from Scratch",
     category: "Design",
     domain: "figma.com",
     excerpt: "A practical guide to creating scalable, consistent design systems that grow with your product.",
