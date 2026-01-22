@@ -4,32 +4,32 @@ const reasons = [
   {
     icon: Users,
     title: "End-to-End Expertise, One Aligned Team",
-    description: "Design, development, content, and strategy—all under one roof, working in sync.",
+    description: "Design, content, development, and strategy work together seamlessly. Our cross-functional team aligns every decision around growth, conversion, and long-term brand strength.",
   },
   {
     icon: Lightbulb,
     title: "Strategy Before Execution",
-    description: "We don't just build; we think. Every decision is grounded in business goals and user needs.",
+    description: "We don’t jump straight into design or content. Every project begins with clarity, defining direction, positioning, and priorities. If the strategy isn’t right, we pause, refine, or say no.",
   },
   {
     icon: Target,
     title: "We Don't Do Generic Growth",
-    description: "Your brand is unique. Our solutions are custom-tailored to your specific challenges and opportunities.",
+    description: "We don’t chase vanity metrics or short-term spikes. Our work is built around sustainable growth, brand clarity first, performance second, scale third.",
   },
   {
     icon: Handshake,
     title: "Fewer Clients, Deeper Partnerships",
-    description: "We limit our client roster to ensure every brand gets the attention and dedication it deserves.",
+    description: "We intentionally limit active projects so every brand gets senior attention, fast decision-making, and consistent quality, not hand-offs or junior-led execution.",
   },
   {
     icon: Zap,
     title: "Fast, Transparent & Truly Collaborative",
-    description: "Clear communication, quick turnarounds, and a partnership approach from day one.",
+    description: "Clear scopes, honest timelines, and direct communication. We work like a partner, not a vendor, keeping you involved and informed from idea to launch and beyond.",
   },
   {
     icon: Award,
     title: "Results That Speak for Themselves",
-    description: "Our work has helped brands grow revenue, increase engagement, and build lasting market presence.",
+    description: "Every project is tied to real business goals. We track performance, refine continuously, and focus on long-term growth and measurable impact.",
   },
 ];
 
