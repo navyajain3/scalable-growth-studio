@@ -3,12 +3,7 @@ import startupsVisual from "@/assets/who-we-help-startups.jpg";
 import enterpriseVisual from "@/assets/who-we-help-enterprise.jpg";
 import ecommerceVisual from "@/assets/who-we-help-ecommerce.jpg";
 import foundersVisual from "@/assets/who-we-help-founders.jpg";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 
 const audiences = [
   {
@@ -60,12 +55,10 @@ export function WhoWeHelp() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Who We Help
           </span>
-          <h2 className="heading-lg mb-4">
-            Empowering bold ideas across industries.
-          </h2>
+          <h2 className="heading-lg mb-4">Empowering bold ideas across industries.</h2>
           <p className="body-lg text-muted-foreground">
-            We work with ambitious teams and individuals who want to build
-            strong digital identities and scale with intention.
+            We partner with ambitious teams and leaders to design digital identities that scale with intention,
+            strategy, and long-term impact.
           </p>
         </div>
 
@@ -75,7 +68,7 @@ export function WhoWeHelp() {
             <CarouselContent>
               {audiences.map((item, index) => (
                 <CarouselItem key={item.title}>
-                  <div 
+                  <div
                     className="rounded-2xl overflow-hidden border border-border/50 opacity-0 animate-slide-up"
                     style={{ animationDelay: `${0.1 * (index + 1)}s` }}
                   >
@@ -85,12 +78,8 @@ export function WhoWeHelp() {
                       className="w-full aspect-[4/3] object-cover"
                     />
                     <div className="p-6">
-                      <h3 className="text-xl font-medium mb-2 text-foreground">
-                        {item.title}
-                      </h3>
-                      <p className="body-md text-foreground">
-                        {item.description}
-                      </p>
+                      <h3 className="text-xl font-medium mb-2 text-foreground">{item.title}</h3>
+                      <p className="body-md text-foreground">{item.description}</p>
                     </div>
                   </div>
                 </CarouselItem>
@@ -105,9 +94,7 @@ export function WhoWeHelp() {
                 key={index}
                 onClick={() => api?.scrollTo(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "w-6 bg-primary"
-                    : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                  current === index ? "w-6 bg-primary" : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -161,9 +148,7 @@ export function WhoWeHelp() {
                     src={item.image}
                     alt={`Visual representing ${item.title}`}
                     className={`w-full h-auto object-cover transition-opacity duration-500 ${
-                      activeIndex === index
-                        ? "opacity-100 relative"
-                        : "opacity-0 absolute inset-0"
+                      activeIndex === index ? "opacity-100 relative" : "opacity-0 absolute inset-0"
                     }`}
                   />
                 ))}
