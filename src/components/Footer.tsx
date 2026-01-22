@@ -20,9 +20,9 @@ export function Footer() {
     <footer className="border-t border-border py-16 md:py-20">
       <div className="container-wide">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12 text-center md:text-left">
           {/* Brand Column */}
-          <div className="md:col-span-2 lg:col-span-1">
+          <div>
             <span className="text-xl font-semibold block mb-3">ScalKit</span>
             <p className="text-muted-foreground text-sm">
               Building brands that scale.
