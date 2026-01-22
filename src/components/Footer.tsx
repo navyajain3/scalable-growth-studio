@@ -24,23 +24,16 @@ export function Footer() {
           {/* Brand Column */}
           <div>
             <span className="text-xl font-semibold block mb-3">ScalKit</span>
-            <p className="text-muted-foreground text-sm">
-              A Complete Digital Growth System for Brands Ready to Scale.
-            </p>
+            <p className="text-muted-foreground text-sm">A Complete Digital Growth System For Brands Ready To Scale</p>
           </div>
 
           {/* Quick Links Column */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
-              Quick Links
-            </h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
+                  <a href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     {link.label}
                   </a>
                 </li>
@@ -50,9 +43,7 @@ export function Footer() {
 
           {/* Services Column */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
-              Services
-            </h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.label}>
@@ -69,9 +60,7 @@ export function Footer() {
 
           {/* Contact Column */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
-              Get in Touch
-            </h4>
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Get in Touch</h4>
             <ul className="space-y-3">
               <li>
                 <a

@@ -13,24 +13,27 @@ export function Hero() {
       <div className="absolute inset-0 bg-background overflow-hidden">
         {/* Subtle Purple Aurora Wave */}
         <div className="absolute inset-0 aurora-bg opacity-40 dark:opacity-30" />
-        
+
         {/* Floating Orb 1 - Large center orb */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] animate-float-slow">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-500/15 via-[hsl(277_100%_66%/0.10)] to-purple-500/15 dark:from-violet-500/5 dark:via-[hsl(277_100%_66%/0.03)] dark:to-purple-500/5 blur-3xl" />
         </div>
-        
+
         {/* Floating Orb 2 - Top right (magenta-leaning) */}
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] animate-float-medium">
           <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-purple-500/12 to-transparent dark:from-purple-500/4 blur-3xl" />
         </div>
-        
+
         {/* Floating Orb 3 - Bottom left (violet-leaning) */}
         <div className="absolute -bottom-32 -left-32 w-[450px] h-[450px] animate-float-slower">
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-violet-500/12 to-transparent dark:from-violet-500/4 blur-3xl" />
         </div>
-        
+
         {/* Floating Orb 4 - Bottom right accent */}
-        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] animate-float-medium" style={{ animationDelay: "-5s" }}>
+        <div
+          className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] animate-float-medium"
+          style={{ animationDelay: "-5s" }}
+        >
           <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[hsl(277_100%_66%/0.10)] to-transparent dark:from-[hsl(277_100%_66%/0.03)] blur-3xl" />
         </div>
       </div>
@@ -39,25 +42,27 @@ export function Hero() {
         <div className="hero-content max-w-4xl mx-auto space-y-8">
           {/* Headline */}
           <AnimatedHeading as="h1" className="heading-xl mb-6">
-            A Complete Digital Growth System for Brands Ready to Scale.
+            A Complete Digital Growth System For Brands Ready To Scale
           </AnimatedHeading>
 
           {/* Subtext */}
           <p className="body-lg max-w-2xl mx-auto opacity-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            Using our extensive knowledge of design, technology, and strategy, we build brands that grow with clarity, consistency, and long-term impact.
+            Using our extensive knowledge of design, technology, and strategy, we build brands that grow with clarity,
+            consistency, and long-term impact.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 opacity-0 animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 opacity-0 animate-fade-in"
+            style={{ animationDelay: "0.5s" }}
+          >
             <Button variant="hero" size="lg" asChild>
               <a href="#contact">
                 Book a Call
                 <ArrowRight className="ml-1 h-4 w-4" />
               </a>
             </Button>
-            <ShimmerButton href="#services">
-              View Services
-            </ShimmerButton>
+            <ShimmerButton href="#services">View Services</ShimmerButton>
           </div>
         </div>
       </div>
