@@ -13,23 +13,25 @@ export function Hero() {
       <div className="absolute inset-0 bg-background overflow-hidden">
         {/* Subtle Purple Aurora Wave */}
         <div className="absolute inset-0 aurora-bg opacity-40 dark:opacity-30" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] animate-float-slow">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-muted/40 via-muted/20 to-muted/40 blur-3xl" />
+        
+        {/* Floating Orb 1 - Large center orb */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] animate-float-slow">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/15 via-violet-400/10 to-purple-600/15 blur-3xl" />
         </div>
         
         {/* Floating Orb 2 - Top right */}
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] animate-float-medium">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-muted/30 to-transparent blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] animate-float-medium">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-violet-500/12 to-transparent blur-3xl" />
         </div>
         
         {/* Floating Orb 3 - Bottom left */}
-        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] animate-float-slower">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-muted/30 to-transparent blur-3xl" />
+        <div className="absolute -bottom-32 -left-32 w-[450px] h-[450px] animate-float-slower">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-600/12 to-transparent blur-3xl" />
         </div>
         
         {/* Floating Orb 4 - Bottom right accent */}
-        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] animate-float-medium" style={{ animationDelay: "-5s" }}>
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-muted/25 to-transparent blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] animate-float-medium" style={{ animationDelay: "-5s" }}>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-violet-400/10 to-transparent blur-3xl" />
         </div>
       </div>
 
