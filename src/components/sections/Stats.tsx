@@ -125,7 +125,7 @@ export function Stats() {
             </span>
           </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
-            Trusted by ambitious brands worldwide.
+            Trusted By Ambitious Brands Worldwide
           </AnimatedHeading>
           <p className="body-lg text-muted-foreground">Real feedback from founders and teams we’ve partnered with.</p>
         </div>
