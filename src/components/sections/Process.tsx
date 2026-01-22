@@ -65,7 +65,7 @@ export function Process() {
               key={index}
               className="p-6 rounded-2xl bg-card border border-border/40 
                          transition-all duration-300 
-                         hover:-translate-y-2 hover:border-border/80 hover:shadow-lg
+                         hover:border-border/80 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]
                          animate-fade-in [animation-fill-mode:backwards]"
               style={{ animationDelay: `${0.1 * index}s` }}
             >
