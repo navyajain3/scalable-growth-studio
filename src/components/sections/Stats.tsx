@@ -1,10 +1,84 @@
 import { Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: "85+", label: "Brands scaled with us" },
-  { value: "215+", label: "Projects successfully delivered" },
-  { value: "88%", label: "Client retention rate" },
+  { value: 85, suffix: "+", label: "Brands scaled with us" },
+  { value: 215, suffix: "+", label: "Projects successfully delivered" },
+  { value: 88, suffix: "%", label: "Client retention rate" },
 ];
+
+function useCountUp(end: number, duration: number = 2000, startOnView: boolean = true) {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!startOnView) {
+      setHasStarted(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasStarted, startOnView]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime: number | null = null;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      // Easing function for smooth deceleration
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      
+      setCount(Math.floor(easeOutQuart * end));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [hasStarted, end, duration]);
+
+  return { count, ref };
+}
+
+function StatItem({ stat, index }: { stat: typeof stats[0]; index: number }) {
+  const { count, ref } = useCountUp(stat.value, 2000);
+  
+  return (
+    <div
+      ref={ref}
+      className="text-center opacity-0 animate-slide-up"
+      style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+    >
+      <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-2">
+        {count}{stat.suffix}
+      </div>
+      <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
+    </div>
+  );
+}
 
 const testimonials = [
   {
@@ -53,14 +127,7 @@ export function Stats() {
         {/* Stats Row */}
         <div className="grid grid-cols-3 gap-8 mb-20">
           {stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className="text-center opacity-0 animate-slide-up"
-              style={{ animationDelay: `${0.1 * (index + 1)}s` }}
-            >
-              <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-2">{stat.value}</div>
-              <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
-            </div>
+            <StatItem key={stat.label} stat={stat} index={index} />
           ))}
         </div>
 
