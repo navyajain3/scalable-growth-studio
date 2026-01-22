@@ -35,9 +35,11 @@ export function FAQ() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30 text-foreground text-sm font-medium mb-6">
-            FAQs
-          </span>
+          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-sm font-medium">
+              FAQs
+            </span>
+          </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Got Questions? We've Got You Covered
           </AnimatedHeading>
