@@ -120,7 +120,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
             <img
               src={service.image}
               alt={service.title}
-              className="service-image w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="service-image w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105"
             />
 
             {/* Overlay Gradient */}
