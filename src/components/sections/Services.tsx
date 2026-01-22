@@ -101,7 +101,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       </div>
 
       {/* Interactive Image */}
-        <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
+      <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
         <div
           className="relative group"
           onMouseMove={handleMouseMove}
@@ -146,7 +146,7 @@ export function Services() {
             </span>
           </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
-            From idea to execution, we've got you covered.
+            From Idea To Execution, We’ve Got You Covered
           </AnimatedHeading>
           <p className="body-lg">
             Everything your brand needs to design, launch, and grow, delivered by one aligned team.
