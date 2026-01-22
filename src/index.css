@@ -61,13 +61,16 @@
 
     --radius: 0.75rem;
 
-    /* Glow Effects - Pink/Lavender to Cyan */
-    --glow-primary: 280 40% 70%;
-    --glow-subtle: 190 50% 75%;
+    /* Glow Effects - Purple tones */
+    --glow-primary: 280 50% 65%;
+    --glow-subtle: 260 40% 70%;
     
-    /* Hero Gradient */
-    --hero-gradient-start: 300 30% 85%;
-    --hero-gradient-end: 190 40% 88%;
+    /* Hero Gradient - Enhanced purple */
+    --hero-gradient-start: 280 40% 90%;
+    --hero-gradient-end: 260 35% 88%;
+    
+    /* Dot Grid */
+    --grid-dot-color: 280 30% 60% / 0.06;
     
     /* Shadows */
     --shadow-soft: 0 4px 24px -8px hsl(240 5% 10% / 0.1);
@@ -104,13 +107,16 @@
     --input: 0 0% 14%;
     --ring: 280 45% 65%;
 
-    /* Glow Effects - Pink/Lavender to Cyan */
-    --glow-primary: 280 40% 65%;
-    --glow-subtle: 190 50% 50%;
+    /* Glow Effects - Purple tones */
+    --glow-primary: 280 50% 60%;
+    --glow-subtle: 260 40% 55%;
     
-    /* Hero Gradient */
-    --hero-gradient-start: 300 30% 25%;
-    --hero-gradient-end: 190 40% 20%;
+    /* Hero Gradient - Enhanced purple */
+    --hero-gradient-start: 280 45% 25%;
+    --hero-gradient-end: 260 40% 20%;
+    
+    /* Dot Grid */
+    --grid-dot-color: 280 50% 60% / 0.12;
     
     /* Shadows */
     --shadow-soft: 0 4px 24px -8px hsl(280 40% 60% / 0.15);
@@ -137,6 +143,16 @@
 }
 
 @layer utilities {
+  /* Dot Grid Pattern */
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      hsl(var(--grid-dot-color)) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
   /* Glow Card Effect */
   .glow-card {
     @apply relative overflow-hidden rounded-2xl border border-border bg-card;
