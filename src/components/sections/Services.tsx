@@ -69,7 +69,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
     >
       {/* Text Content */}
       <div className={`space-y-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
-        <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">
+        <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium">
           {service.badge}
         </span>
         <h3 className="heading-md">{service.title}</h3>
@@ -130,7 +130,7 @@ export function Services() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
             Our Services
           </span>
           <h2 className="heading-lg mb-4">
