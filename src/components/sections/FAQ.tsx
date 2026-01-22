@@ -52,7 +52,7 @@ export function FAQ() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="glow-card border-none px-6 opacity-0 animate-slide-up"
+                className="glow-card border-none px-6 animate-slide-up [animation-fill-mode:backwards]"
                 style={{ animationDelay: `${0.08 * (index + 1)}s` }}
               >
                 <AccordionTrigger className="text-left text-base font-medium hover:no-underline py-5">
