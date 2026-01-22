@@ -143,14 +143,50 @@
 }
 
 @layer utilities {
-  /* Dot Grid Pattern */
-  .dot-grid {
-    background-image: radial-gradient(
-      circle,
-      hsl(var(--grid-dot-color)) 1px,
-      transparent 1px
+  /* Aurora Wave Animation */
+  @keyframes aurora {
+    0%, 100% { 
+      background-position: 0% 50%;
+      opacity: 0.5;
+    }
+    25% {
+      background-position: 50% 100%;
+      opacity: 0.7;
+    }
+    50% { 
+      background-position: 100% 50%;
+      opacity: 0.6;
+    }
+    75% {
+      background-position: 50% 0%;
+      opacity: 0.8;
+    }
+  }
+
+  .aurora-bg {
+    background: linear-gradient(
+      -45deg,
+      hsl(280 60% 55% / 0.25),
+      hsl(260 50% 60% / 0.15),
+      hsl(290 55% 50% / 0.2),
+      hsl(270 45% 55% / 0.15),
+      hsl(280 60% 55% / 0.25)
     );
-    background-size: 24px 24px;
+    background-size: 400% 400%;
+    animation: aurora 12s ease-in-out infinite;
+  }
+
+  .dark .aurora-bg {
+    background: linear-gradient(
+      -45deg,
+      hsl(280 60% 50% / 0.4),
+      hsl(260 50% 55% / 0.3),
+      hsl(290 55% 45% / 0.35),
+      hsl(270 45% 50% / 0.3),
+      hsl(280 60% 50% / 0.4)
+    );
+    background-size: 400% 400%;
+    animation: aurora 12s ease-in-out infinite;
   }
 
   /* Glow Card Effect */
