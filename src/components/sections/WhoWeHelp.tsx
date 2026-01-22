@@ -51,7 +51,7 @@ export function WhoWeHelp() {
             </h2>
 
             {/* Intro Text */}
-            <p className="body-lg mb-12">
+            <p className="body-lg mb-8">
               We work with ambitious teams and individuals who want to build
               strong digital identities and scale with intention.
             </p>
@@ -69,14 +69,14 @@ export function WhoWeHelp() {
                 >
                   <h3
                     className={`text-xl font-medium mb-2 transition-colors duration-300 ${
-                      activeIndex === index ? "text-primary" : "text-foreground"
+                      activeIndex === index ? "text-foreground" : "text-muted-foreground"
                     }`}
                   >
                     {item.title}
                   </h3>
                   <p
-                    className={`body-md transition-opacity duration-300 ${
-                      activeIndex === index ? "opacity-100" : "opacity-70"
+                    className={`body-md transition-colors duration-300 ${
+                      activeIndex === index ? "text-foreground" : "text-muted-foreground"
                     }`}
                   >
                     {item.description}
