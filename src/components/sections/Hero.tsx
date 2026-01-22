@@ -1,18 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useHeroParallax } from "@/hooks/useGSAPScrollAnimations";
 
 export function Hero() {
+  useHeroParallax();
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Subtle Gradient Background */}
       <div className="absolute inset-0 bg-background">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-30 dark:opacity-20">
+        <div className="hero-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-30 dark:opacity-20">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 via-primary/10 to-transparent blur-3xl animate-glow-pulse" />
         </div>
       </div>
 
       <div className="container-wide relative z-10 text-center pt-20">
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="hero-content max-w-4xl mx-auto space-y-8">
           {/* Headline */}
           <h1 className="heading-xl opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             A Complete Digital Growth System for Brands Ready to Scale.

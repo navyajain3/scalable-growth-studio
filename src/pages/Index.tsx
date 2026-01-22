@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { WhoWeHelp } from "@/components/sections/WhoWeHelp";
@@ -9,8 +10,18 @@ import { Insights } from "@/components/sections/Insights";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
+import { useGSAPScrollAnimations, cleanupScrollTriggers } from "@/hooks/useGSAPScrollAnimations";
 
 const Index = () => {
+  // Initialize GSAP ScrollTrigger
+  useGSAPScrollAnimations();
+
+  useEffect(() => {
+    return () => {
+      cleanupScrollTriggers();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
