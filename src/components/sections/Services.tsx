@@ -110,7 +110,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
           />
 
           {/* Image Container */}
-          <div className="relative liquid-glass overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
+          <div className="relative glow-card overflow-hidden rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]">
             <img
               src={service.image}
               alt={service.title}

@@ -26,7 +26,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "liquid-glass-nav"
+          ? "bg-background/80 backdrop-blur-lg border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -72,7 +72,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden liquid-glass-nav">
+        <div className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border">
           <div className="container-wide py-6 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a

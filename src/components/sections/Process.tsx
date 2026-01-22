@@ -63,9 +63,9 @@ export function Process() {
         {steps.map((step, index) => (
             <div
               key={index}
-              className="liquid-glass p-6 
+              className="p-6 rounded-2xl bg-card border border-border/40 
                          transition-all duration-300 
-                         hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]
+                         hover:border-border/80 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]
                          animate-fade-in [animation-fill-mode:backwards]"
               style={{ animationDelay: `${0.1 * index}s` }}
             >

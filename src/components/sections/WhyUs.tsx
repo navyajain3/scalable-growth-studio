@@ -63,7 +63,7 @@ export function WhyUs() {
           {reasons.map((reason, index) => (
             <div
               key={reason.title}
-              className="liquid-glass p-7 hover-lift opacity-0 animate-slide-up"
+              className="glow-card glow-border p-7 hover-lift opacity-0 animate-slide-up"
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
               <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
