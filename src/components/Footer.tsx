@@ -21,10 +21,7 @@ export function Footer() {
             >
               <Mail className="w-5 h-5" />
             </a>
-            <a
-              href="tel:+1234567890"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
+            <a href="tel:+91 88822 17810" className="text-muted-foreground hover:text-foreground transition-colors">
               <Phone className="w-5 h-5" />
             </a>
             <a
