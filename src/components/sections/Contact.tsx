@@ -39,7 +39,7 @@ export function Contact() {
             {/* Contact Info */}
             <div className="space-y-6">
               <a
-                href="mailto:hello@scalkit.com"
+                href="mailto:navya@scalkit.com"
                 className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
