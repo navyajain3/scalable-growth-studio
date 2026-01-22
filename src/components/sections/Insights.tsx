@@ -1,6 +1,15 @@
-import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
+
+// Placeholder gradient backgrounds for article cards
+const cardBackgrounds = [
+  "bg-gradient-to-br from-cyan-100 via-pink-100 to-rose-100",
+  "bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100",
+  "bg-gradient-to-br from-violet-100 via-purple-100 to-indigo-100",
+  "bg-gradient-to-br from-orange-100 via-rose-100 to-pink-100",
+  "bg-gradient-to-br from-violet-100 via-pink-100 to-rose-100",
+  "bg-gradient-to-br from-pink-100 via-violet-100 to-blue-100",
+];
 
 export function Insights() {
   return (
@@ -25,34 +34,35 @@ export function Insights() {
             <Link
               key={article.id}
               to={`/blog/${article.id}`}
-              className="group glow-card glow-border hover-lift p-6 flex flex-col animate-fade-in [animation-fill-mode:backwards]"
+              className="group flex flex-col animate-fade-in [animation-fill-mode:backwards]"
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
-              {/* Category & Read Time */}
-              <div className="flex items-center justify-between mb-4">
-                <span className="text-xs text-primary font-medium uppercase tracking-wider">
-                  {article.category}
-                </span>
-                <span className="text-xs text-muted-foreground">
-                  {article.readTime}
-                </span>
+              {/* Image Container */}
+              <div 
+                className={`aspect-[4/3] rounded-2xl mb-4 overflow-hidden ${cardBackgrounds[index % cardBackgrounds.length]} transition-transform duration-300 group-hover:scale-[1.02]`}
+              >
+                {article.image ? (
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    {/* Abstract placeholder icon/shape could go here */}
+                  </div>
+                )}
               </div>
+
+              {/* Domain */}
+              <span className="text-sm text-muted-foreground mb-2">
+                {article.domain}
+              </span>
 
               {/* Title */}
-              <h3 className="text-lg font-medium mb-3 group-hover:text-primary transition-colors leading-snug">
+              <h3 className="text-lg font-medium group-hover:text-primary transition-colors leading-snug">
                 {article.title}
               </h3>
-
-              {/* Excerpt */}
-              <p className="text-sm text-muted-foreground mb-6 line-clamp-2 flex-1">
-                {article.excerpt}
-              </p>
-
-              {/* Read More */}
-              <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors mt-auto">
-                Read article
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </div>
             </Link>
           ))}
         </div>
