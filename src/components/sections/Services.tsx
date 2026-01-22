@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useServicesParallax } from "@/hooks/useGSAPScrollAnimations";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
-import serviceUiUx from "@/assets/service-ui-ux.jpg";
-import serviceBranding from "@/assets/service-branding.jpg";
-import serviceContent from "@/assets/service-content.jpg";
-import serviceStrategy from "@/assets/service-strategy.jpg";
-import serviceVideo from "@/assets/service-video.jpg";
+import serviceWebDev from "@/assets/service-web-dev.svg";
+import serviceUiUx from "@/assets/service-ui-ux.svg";
+import serviceGraphicDesign from "@/assets/service-graphic-design.svg";
+import serviceBranding from "@/assets/service-branding.svg";
+import serviceContent from "@/assets/service-content.svg";
+import serviceStrategy from "@/assets/service-strategy.svg";
+import serviceVideo from "@/assets/service-video.svg";
 
 const services = [
   {
@@ -14,7 +16,7 @@ const services = [
     description:
       "Custom websites, web apps, and mobile applications built for performance and scale. We use modern technologies to create fast, secure, and scalable digital products.",
     tags: ["React", "Next.js", "Mobile Apps"],
-    image: "https://raw.githubusercontent.com/juanmnl/vs-mr-pink/master/screenshots/colorizer.jpg",
+    image: serviceWebDev,
   },
   {
     badge: "Design",
@@ -30,7 +32,7 @@ const services = [
     description:
       "From social posts to pitch decks, we create designs that look stunning and speak your brand's language.",
     tags: ["Social Media", "Pitch Decks", "Marketing Materials"],
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&auto=format&fit=crop&q=80",
+    image: serviceGraphicDesign,
   },
   {
     badge: "Brand Identity",
