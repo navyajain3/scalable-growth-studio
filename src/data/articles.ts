@@ -245,4 +245,63 @@ AI is not the end of design—it's a new beginning.
     readTime: "7 min read",
     date: "Dec 20, 2025",
   },
+  {
+    id: "building-design-system-from-scratch",
+    title: "Building a Design System From Scratch",
+    category: "Design",
+    excerpt: "A practical guide to creating scalable, consistent design systems that grow with your product.",
+    content: `
+# Building a Design System From Scratch
+
+A design system is more than a style guide—it's the foundation for scalable, consistent product development.
+
+## Why Design Systems Matter
+
+As products grow, inconsistency creeps in. Different designers interpret the same elements differently. Developers implement variations. The result? A fragmented user experience and mounting technical debt.
+
+### The Benefits
+
+**1. Consistency**
+Every component looks and behaves the same across your entire product.
+
+**2. Efficiency**
+Designers and developers spend less time recreating elements and more time solving problems.
+
+**3. Scalability**
+New features can be built faster using existing components.
+
+**4. Quality**
+Fewer bugs and edge cases when components are thoroughly tested and documented.
+
+## Where to Start
+
+**1. Audit Your Existing Design**
+Document every color, typography style, spacing value, and component in your current product.
+
+**2. Define Your Tokens**
+Start with the fundamentals: colors, typography, spacing, shadows, and borders.
+
+**3. Build Core Components**
+Buttons, inputs, cards, modals—the building blocks everything else is built upon.
+
+**4. Document Everything**
+A design system is only as good as its documentation.
+
+**5. Iterate and Evolve**
+Your design system should grow with your product. Build in processes for updates and additions.
+
+## Common Mistakes
+
+- Starting too complex
+- Not getting buy-in from the team
+- Treating it as a one-time project instead of ongoing work
+- Ignoring accessibility from the start
+
+## The Long Game
+
+Building a design system is an investment. The upfront effort pays dividends in speed, quality, and consistency for years to come.
+    `,
+    readTime: "6 min read",
+    date: "Dec 15, 2025",
+  },
 ];
