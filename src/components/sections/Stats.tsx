@@ -37,6 +37,19 @@ export function Stats() {
   return (
     <section className="section-padding">
       <div className="container-wide">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+            Our Impact
+          </span>
+          <h2 className="heading-lg mb-4">
+            Trusted by ambitious brands worldwide.
+          </h2>
+          <p className="body-lg text-muted-foreground">
+            Numbers and stories that speak for themselves.
+          </p>
+        </div>
+
         {/* Stats Row */}
         <div className="grid grid-cols-3 gap-8 mb-20">
           {stats.map((stat, index) => (

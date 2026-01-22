@@ -40,8 +40,8 @@ export function WhoWeHelp() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
           {/* Left Column - Content */}
           <div>
-            {/* Section Label */}
-            <span className="text-sm uppercase tracking-widest text-muted-foreground mb-6 block">
+            {/* Section Badge */}
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Who We Help
             </span>
 
