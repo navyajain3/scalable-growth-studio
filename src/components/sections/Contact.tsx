@@ -57,7 +57,7 @@ export function Contact() {
                 <span>+91 88822 17810</span>
               </a>
               <a
-                href="https://linkedin.com/company/scalkit"
+                href="https://in.linkedin.com/in/navyaj"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-muted-foreground hover:text-foreground transition-colors group"
