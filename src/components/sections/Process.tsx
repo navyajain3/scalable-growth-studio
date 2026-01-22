@@ -60,10 +60,14 @@ export function Process() {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {steps.map((step, index) => (
+        {steps.map((step, index) => (
             <div
               key={index}
-              className="p-6 rounded-2xl bg-card border border-border/40 hover:border-border/60 transition-colors duration-300"
+              className="p-6 rounded-2xl bg-card border border-border/40 
+                         transition-all duration-300 
+                         hover:-translate-y-2 hover:border-border/80 hover:shadow-lg
+                         animate-fade-in [animation-fill-mode:backwards]"
+              style={{ animationDelay: `${0.1 * index}s` }}
             >
               {/* Header: Icon + Number */}
               <div className="flex justify-between items-start mb-6">
