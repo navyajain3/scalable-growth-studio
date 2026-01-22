@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { ArrowRight } from "lucide-react";
 import { useHeroParallax } from "@/hooks/useGSAPScrollAnimations";
 
@@ -48,9 +49,9 @@ export function Hero() {
                 <ArrowRight className="ml-1 h-4 w-4" />
               </a>
             </Button>
-            <Button variant="hero-outline" size="lg" asChild>
-              <a href="#services">View Services</a>
-            </Button>
+            <ShimmerButton href="#services">
+              View Services
+            </ShimmerButton>
           </div>
         </div>
       </div>
