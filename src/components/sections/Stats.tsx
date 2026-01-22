@@ -2,8 +2,8 @@ import { Star } from "lucide-react";
 
 const stats = [
   { value: "85+", label: "Brands scaled with us" },
-  { value: "215+", label: "Projects delivered" },
-  { value: "88%", label: "Client retention" },
+  { value: "215+", label: "Projects successfully delivered" },
+  { value: "88%", label: "Client retention rate" },
 ];
 
 const testimonials = [
