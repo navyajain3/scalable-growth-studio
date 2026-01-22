@@ -14,10 +14,13 @@ export function AnimatedHeading({
   as: Component = "h2",
   children,
   className,
-  staggerDelay = 40,
+  staggerDelay = 50,
 }: AnimatedHeadingProps) {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [visibleCount, setVisibleCount] = React.useState(0);
+  const [hasStarted, setHasStarted] = React.useState(false);
   const ref = React.useRef<HTMLHeadingElement>(null);
+
+  const words = children.split(" ");
 
   React.useEffect(() => {
     // Check for reduced motion preference
@@ -26,14 +29,14 @@ export function AnimatedHeading({
     ).matches;
 
     if (prefersReducedMotion) {
-      setIsVisible(true);
+      setVisibleCount(words.length);
       return;
     }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
           observer.disconnect();
         }
       },
@@ -45,9 +48,20 @@ export function AnimatedHeading({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [hasStarted, words.length]);
 
-  const words = children.split(" ");
+  // Typewriter effect - reveal words one by one
+  React.useEffect(() => {
+    if (!hasStarted) return;
+
+    if (visibleCount < words.length) {
+      const timeout = setTimeout(() => {
+        setVisibleCount((prev) => prev + 1);
+      }, staggerDelay);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [hasStarted, visibleCount, words.length, staggerDelay]);
 
   return (
     <Component ref={ref} className={cn(className)}>
@@ -55,14 +69,9 @@ export function AnimatedHeading({
         <span
           key={index}
           className={cn(
-            "inline-block",
-            isVisible
-              ? "animate-[word-reveal_0.3s_ease-out_forwards]"
-              : "opacity-0"
+            "inline-block transition-none",
+            index < visibleCount ? "opacity-100" : "opacity-0"
           )}
-          style={{
-            animationDelay: isVisible ? `${index * staggerDelay}ms` : "0ms",
-          }}
         >
           {word}
           {index < words.length - 1 && "\u00A0"}
