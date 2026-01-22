@@ -24,7 +24,7 @@ function useCountUp(end: number, duration: number = 2000, startOnView: boolean =
           setHasStarted(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     if (ref.current) {
@@ -44,10 +44,10 @@ function useCountUp(end: number, duration: number = 2000, startOnView: boolean =
       if (!startTime) startTime = currentTime;
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      
+
       // Easing function for smooth deceleration
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      
+
       setCount(Math.floor(easeOutQuart * end));
 
       if (progress < 1) {
@@ -63,9 +63,9 @@ function useCountUp(end: number, duration: number = 2000, startOnView: boolean =
   return { count, ref };
 }
 
-function StatItem({ stat, index }: { stat: typeof stats[0]; index: number }) {
+function StatItem({ stat, index }: { stat: (typeof stats)[0]; index: number }) {
   const { count, ref } = useCountUp(stat.value, 2000);
-  
+
   return (
     <div
       ref={ref}
@@ -73,7 +73,8 @@ function StatItem({ stat, index }: { stat: typeof stats[0]; index: number }) {
       style={{ animationDelay: `${0.1 * (index + 1)}s` }}
     >
       <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-2">
-        {count}{stat.suffix}
+        {count}
+        {stat.suffix}
       </div>
       <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
     </div>
@@ -118,7 +119,7 @@ export function Stats() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-foreground text-sm font-medium mb-6">
-            Our Impact
+            Testimonials
           </span>
           <h2 className="heading-lg mb-4">Trusted by ambitious brands worldwide.</h2>
           <p className="body-lg text-muted-foreground">Real feedback from founders and teams we’ve partnered with.</p>
