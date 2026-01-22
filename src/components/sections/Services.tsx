@@ -39,7 +39,7 @@ const services = [
     title: "Branding & Marketing",
     description:
       "Strategic brand identity and marketing campaigns that build lasting recognition. We help you stand out in crowded markets with distinctive visual identities.",
-    tags: ["Logo Design", "Brand Guidelines", "Campaigns"],
+    tags: ["Brand Identity", "Messaging & Positioning", "Marketing Campaigns"],
     image: serviceBranding,
   },
   {
