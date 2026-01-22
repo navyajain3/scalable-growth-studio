@@ -15,7 +15,7 @@ const services = [
     title: "Web & App Development",
     description:
       "Custom websites, web apps, and mobile applications built for performance and scale. We use modern technologies to create fast, secure, and scalable digital products.",
-    tags: ["React", "Next.js", "Mobile Apps"],
+    tags: ["Scalable Architecture", "Performance & Security", "Seamless Integrations"],
     image: serviceWebDev,
   },
   {
@@ -23,7 +23,7 @@ const services = [
     title: "UI/UX Design",
     description:
       "User-centered design that creates intuitive, engaging digital experiences. Every pixel is crafted to delight users and drive conversions.",
-    tags: ["Wireframes", "Prototypes", "User Testing"],
+    tags: ["User Research", "Interface Design", "Conversion Optimization"],
     image: serviceUiUx,
   },
   {
@@ -31,7 +31,7 @@ const services = [
     title: "Graphic Design",
     description:
       "From social posts to pitch decks, we create designs that look stunning and speak your brand's language.",
-    tags: ["Social Media", "Pitch Decks", "Marketing Materials"],
+    tags: ["Visual Systems", "Brand Assets", "Communication Design"],
     image: serviceGraphicDesign,
   },
   {
@@ -47,7 +47,7 @@ const services = [
     title: "Content Writing",
     description:
       "Compelling copy and content that resonates with your audience and drives action. From website copy to blog posts, we craft words that convert.",
-    tags: ["Copywriting", "SEO Content", "Blog Posts"],
+    tags: ["Brand Voice", "Storytelling", "SEO-Driven Content"],
     image: serviceContent,
   },
   {
@@ -55,7 +55,7 @@ const services = [
     title: "Strategy & Growth",
     description:
       "Data-driven strategies that accelerate your business growth and market position. We analyze, plan, and execute to maximize your ROI.",
-    tags: ["Analytics", "Marketing & Outreach Strategy", "Performance"],
+    tags: ["Market Positioning", "Data-Led Decisions", "Sustainable Growth"],
     image: serviceStrategy,
   },
   {
@@ -63,7 +63,7 @@ const services = [
     title: "Video Production",
     description:
       "Professional video content that tells your story and engages your audience. From concept to final cut, we handle every aspect of video creation.",
-    tags: ["Brand Films", "Social Ads", "Explainers"],
+    tags: ["Concept & Scripting", "Production & Editing", "Distribution-Ready Content"],
     image: serviceVideo,
   },
 ];
