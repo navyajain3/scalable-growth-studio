@@ -37,33 +37,33 @@ export function Insights() {
               className="group flex flex-col animate-fade-in [animation-fill-mode:backwards]"
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
-              {/* Image Container */}
-              <div 
-                className={`aspect-[4/3] rounded-2xl mb-4 overflow-hidden ${cardBackgrounds[index % cardBackgrounds.length]} transition-transform duration-300 group-hover:scale-[1.02]`}
-              >
-                {article.image ? (
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    {/* Abstract placeholder icon/shape could go here */}
-                  </div>
-                )}
-              </div>
+            {/* Image Container */}
+            <div 
+              className={`aspect-[4/3] rounded-2xl overflow-hidden ${cardBackgrounds[index % cardBackgrounds.length]} transition-transform duration-300 group-hover:scale-[1.02]`}
+            >
+              {article.image ? (
+                <img 
+                  src={article.image} 
+                  alt={article.title}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center">
+                  {/* Abstract placeholder icon/shape could go here */}
+                </div>
+              )}
+            </div>
 
-              {/* Domain */}
-              <span className="text-sm text-muted-foreground mb-2">
+            {/* Content Tile */}
+            <div className="mt-4 p-4 rounded-xl bg-muted/30 backdrop-blur-sm border border-border/30">
+              <span className="text-sm text-muted-foreground block mb-2">
                 {article.domain}
               </span>
-
-              {/* Title */}
               <h3 className="text-lg font-medium group-hover:text-primary transition-colors leading-snug">
                 {article.title}
               </h3>
-            </Link>
+            </div>
+          </Link>
           ))}
         </div>
       </div>
