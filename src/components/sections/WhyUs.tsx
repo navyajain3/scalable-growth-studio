@@ -52,7 +52,7 @@ export function WhyUs() {
             </span>
           </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
-            We don't just work for your brand, we grow it with you.
+            We Don’t Just Work For Your Brand, We Grow It With You
           </AnimatedHeading>
           <p className="body-lg text-muted-foreground">
             Our approach is built on clarity, partnership, and measurable outcomes, not shortcuts or surface-level
