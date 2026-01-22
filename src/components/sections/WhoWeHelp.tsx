@@ -109,23 +109,25 @@ export function WhoWeHelp() {
             {audiences.map((item, index) => (
               <div
                 key={item.title}
-                className={`py-6 border-b border-border last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up ${
-                  activeIndex === index ? "bg-secondary/20 -mx-6 px-6 rounded-lg border-transparent" : ""
-                }`}
+                className={`py-8 border-b border-border/30 last:border-b-0 cursor-pointer transition-all duration-300 opacity-0 animate-slide-up`}
                 style={{ animationDelay: `${0.1 * (index + 1)}s` }}
                 onMouseEnter={() => setActiveIndex(index)}
                 onClick={() => setActiveIndex(index)}
               >
                 <h3
-                  className={`text-xl font-medium mb-2 transition-colors duration-300 ${
-                    activeIndex === index ? "text-foreground" : "text-muted-foreground"
+                  className={`font-heading mb-3 transition-all duration-300 ${
+                    activeIndex === index 
+                      ? "text-2xl font-medium text-foreground" 
+                      : "text-xl font-normal text-muted-foreground/60"
                   }`}
                 >
                   {item.title}
                 </h3>
                 <p
-                  className={`body-md transition-colors duration-300 ${
-                    activeIndex === index ? "text-foreground" : "text-muted-foreground"
+                  className={`text-base leading-relaxed transition-all duration-300 ${
+                    activeIndex === index 
+                      ? "text-foreground/90" 
+                      : "text-muted-foreground/50"
                   }`}
                 >
                   {item.description}
