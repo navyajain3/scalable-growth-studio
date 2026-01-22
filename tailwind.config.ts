@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Aeonik', 'system-ui', 'sans-serif'],
-        button: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Aeonik', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
