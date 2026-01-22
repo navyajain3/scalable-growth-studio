@@ -88,7 +88,7 @@ export function WhoWeHelp() {
                       <h3 className="text-xl font-medium mb-2 text-foreground">
                         {item.title}
                       </h3>
-                      <p className="body-md text-muted-foreground">
+                      <p className="body-md text-foreground">
                         {item.description}
                       </p>
                     </div>
