@@ -24,7 +24,7 @@ export function Contact() {
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Column - Content */}
-          <div className="opacity-0 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+          <div className="opacity-0 animate-slide-up text-center lg:text-left" style={{ animationDelay: "0.1s" }}>
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Get in Touch
             </span>
