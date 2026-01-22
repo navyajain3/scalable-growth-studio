@@ -9,32 +9,29 @@ export function Hero() {
 
   return (
     <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with Dot Grid and Purple Gradients */}
-      <div className="absolute inset-0 bg-background">
-        {/* Dot Grid Pattern */}
-        <div className="absolute inset-0 dot-grid" />
+      {/* Animated Background with Floating Orbs + Aurora */}
+      <div className="absolute inset-0 bg-background overflow-hidden">
+        {/* Aurora Wave Layer - base animated gradient */}
+        <div className="absolute inset-0 aurora-bg" />
         
-        {/* Main purple gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(280_50%_70%/0.15)] via-transparent to-[hsl(260_45%_65%/0.1)] dark:from-[hsl(280_50%_50%/0.2)] dark:to-[hsl(260_45%_45%/0.15)]" />
-        
-        {/* Soft center purple glow */}
-        <div className="hero-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] opacity-30 dark:opacity-20">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[hsl(280_60%_65%/0.35)] via-[hsl(270_50%_60%/0.25)] to-[hsl(260_55%_65%/0.35)] blur-3xl animate-glow-pulse" />
+        {/* Floating Orb 1 - Large center orb */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] animate-float-slow">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500/40 via-violet-400/30 to-purple-600/40 blur-3xl" />
         </div>
         
-        {/* Accent gradient top-right - purple */}
-        <div className="absolute -top-20 -right-20 w-[500px] h-[500px] opacity-25 dark:opacity-15">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[hsl(260_55%_65%)] to-transparent blur-3xl" />
+        {/* Floating Orb 2 - Top right */}
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] animate-float-medium">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-violet-500/35 to-purple-400/20 blur-3xl" />
         </div>
         
-        {/* Accent gradient bottom-left - deeper purple */}
-        <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] opacity-25 dark:opacity-15">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[hsl(280_50%_60%)] to-transparent blur-3xl" />
+        {/* Floating Orb 3 - Bottom left */}
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] animate-float-slower">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-600/35 to-violet-500/20 blur-3xl" />
         </div>
         
-        {/* Additional subtle purple accent - bottom right */}
-        <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] opacity-15 dark:opacity-10">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[hsl(270_45%_55%)] to-transparent blur-3xl" />
+        {/* Floating Orb 4 - Bottom right accent */}
+        <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] animate-float-medium" style={{ animationDelay: "-5s" }}>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-violet-400/30 to-purple-500/15 blur-3xl" />
         </div>
       </div>
 
