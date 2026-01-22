@@ -54,7 +54,7 @@ export function Contact() {
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
-                <span>+1 (234) 567-890</span>
+                <span>+91 88822 17810</span>
               </a>
               <a
                 href="https://linkedin.com/company/scalkit"
@@ -98,7 +98,7 @@ export function Contact() {
                   <div>
                     <label className="text-sm font-medium mb-2 block">Phone Number</label>
                     <Input
-                      placeholder="+1 (234) 567-890"
+                      placeholder="+91 88822 17810"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="bg-background border-border"
