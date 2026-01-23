@@ -1,6 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useFAQParallax } from "@/hooks/useGSAPScrollAnimations";
+import { ShimmerBadge } from "@/components/ui/shimmer-badge";
 
 const faqs = [
   {
@@ -39,11 +40,7 @@ export function FAQ() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
-              FAQs
-            </span>
-          </div>
+          <ShimmerBadge className="mb-6">FAQs</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Got Questions? We've Got You Covered
           </AnimatedHeading>

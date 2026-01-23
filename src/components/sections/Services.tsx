@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useServicesParallax } from "@/hooks/useGSAPScrollAnimations";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
+import { ShimmerBadge } from "@/components/ui/shimmer-badge";
 import serviceWebDev from "@/assets/service-web-dev.svg";
 import serviceUiUx from "@/assets/service-ui-ux.svg";
 import serviceGraphicDesign from "@/assets/service-graphic-design.svg";
@@ -139,11 +140,7 @@ export function Services() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
-              Our Services
-            </span>
-          </div>
+          <ShimmerBadge className="mb-6">Our Services</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             From Idea to Execution, We’ve Got You Covered
           </AnimatedHeading>

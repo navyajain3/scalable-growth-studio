@@ -7,6 +7,7 @@ import defaultVisual from "@/assets/who-we-help-default.jpg";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useWhoWeHelpParallax } from "@/hooks/useGSAPScrollAnimations";
+import { ShimmerBadge } from "@/components/ui/shimmer-badge";
 
 const audiences = [
   {
@@ -58,11 +59,7 @@ export function WhoWeHelp() {
       <div className="container-wide">
         {/* Section Header - Centered */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
-              Who We Help
-            </span>
-          </div>
+          <ShimmerBadge className="mb-6">Who We Help</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Empowering Bold Ideas across Industries
           </AnimatedHeading>
