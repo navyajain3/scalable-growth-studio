@@ -32,12 +32,12 @@ export function Insights() {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-cards">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-cards auto-rows-fr">
           {articles.map((article, index) => (
             <Link
               key={article.id}
               to={`/blog/${article.id}`}
-              className="group insight-card reveal-card h-full"
+              className="group insight-card reveal-card"
             >
               {/* Unified Card Tile */}
               <div className="h-full rounded-2xl bg-muted/30 backdrop-blur-sm border border-border/30 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02] flex flex-col">
@@ -53,7 +53,7 @@ export function Insights() {
                 </div>
 
                 {/* Content */}
-                <div className="p-4 flex flex-col flex-grow">
+                <div className="p-4 flex flex-col flex-grow min-h-[120px]">
                   <span className="text-sm text-muted-foreground block mb-2">{article.domain}</span>
                   <h3 className="text-lg font-medium group-hover:text-violet-500 transition-colors leading-snug line-clamp-3">
                     {article.title}
