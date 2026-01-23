@@ -62,17 +62,17 @@ export function WhyUs() {
         </div>
 
         {/* Reasons Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-cards">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-cards auto-rows-fr">
           {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="glow-card glow-border p-7 hover-lift why-us-card reveal-card"
+              className="glow-card glow-border p-7 hover-lift why-us-card reveal-card flex flex-col h-full"
             >
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-[#501ed4]/10 to-[#7e56e2]/10 border border-[#501ed4]/20 flex items-center justify-center mb-5">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-[#501ed4]/10 to-[#7e56e2]/10 border border-[#501ed4]/20 flex items-center justify-center mb-5 shrink-0">
                 <reason.icon className="w-5 h-5 text-foreground" />
               </div>
               <h3 className="text-lg font-medium mb-2">{reason.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{reason.description}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed flex-1">{reason.description}</p>
             </div>
           ))}
         </div>
