@@ -1,5 +1,6 @@
 import { Users, Lightbulb, Target, Handshake, Zap, Award } from "lucide-react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
+import { useWhyUsParallax } from "@/hooks/useGSAPScrollAnimations";
 
 const reasons = [
   {
@@ -12,13 +13,13 @@ const reasons = [
     icon: Lightbulb,
     title: "Strategy Before Execution",
     description:
-      "We don’t jump straight into design or content. Every project begins with clarity, defining direction, positioning, and priorities. If the strategy isn’t right, we pause, refine, or say no.",
+      "We don't jump straight into design or content. Every project begins with clarity, defining direction, positioning, and priorities. If the strategy isn't right, we pause, refine, or say no.",
   },
   {
     icon: Target,
     title: "We Don't Do Generic Growth",
     description:
-      "We don’t chase vanity metrics or short-term spikes. Our work is built around sustainable growth, brand clarity first, performance second, scale third.",
+      "We don't chase vanity metrics or short-term spikes. Our work is built around sustainable growth, brand clarity first, performance second, scale third.",
   },
   {
     icon: Handshake,
@@ -41,6 +42,9 @@ const reasons = [
 ];
 
 export function WhyUs() {
+  // Initialize parallax
+  useWhyUsParallax();
+
   return (
     <section id="why-us" className="section-padding bg-secondary/30">
       <div className="container-wide">
@@ -52,7 +56,7 @@ export function WhyUs() {
             </span>
           </div>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
-            We Don’t Just Work for Your Brand, We Grow It with You
+            We Don't Just Work for Your Brand, We Grow It with You
           </AnimatedHeading>
           <p className="body-lg text-muted-foreground">
             Our approach is built on clarity, partnership, and measurable outcomes, not shortcuts or surface-level
@@ -65,7 +69,7 @@ export function WhyUs() {
           {reasons.map((reason, index) => (
             <div
               key={reason.title}
-              className="glow-card glow-border p-7 hover-lift opacity-0 animate-slide-up"
+              className="glow-card glow-border p-7 hover-lift opacity-0 animate-slide-up why-us-card"
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
               <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 flex items-center justify-center mb-5">

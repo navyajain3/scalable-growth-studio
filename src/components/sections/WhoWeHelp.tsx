@@ -6,6 +6,7 @@ import foundersVisual from "@/assets/who-we-help-founders.jpg";
 import defaultVisual from "@/assets/who-we-help-default.jpg";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
+import { useWhoWeHelpParallax } from "@/hooks/useGSAPScrollAnimations";
 
 const audiences = [
   {
@@ -39,6 +40,9 @@ export function WhoWeHelp() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
+  // Initialize parallax
+  useWhoWeHelpParallax();
+
   useEffect(() => {
     if (!api) return;
 
@@ -50,7 +54,7 @@ export function WhoWeHelp() {
   }, [api]);
 
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-background who-we-help-section">
       <div className="container-wide">
         {/* Section Header - Centered */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -157,7 +161,7 @@ export function WhoWeHelp() {
           </div>
 
           {/* Right Column - Visual */}
-          <div className="sticky top-32 flex items-center justify-center">
+          <div className="sticky top-32 flex items-center justify-center who-we-help-visual">
             <div className="relative w-full max-w-lg">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-transparent to-purple-500/10 rounded-3xl blur-3xl transition-opacity duration-500" />

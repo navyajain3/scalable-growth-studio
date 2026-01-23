@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
+import { useInsightsParallax } from "@/hooks/useGSAPScrollAnimations";
 
 // Placeholder gradient backgrounds for article cards (violet to magenta theme)
 const cardBackgrounds = [
@@ -12,6 +13,8 @@ const cardBackgrounds = [
 ];
 
 export function Insights() {
+  // Initialize parallax
+  useInsightsParallax();
   return (
     <section id="insights" className="section-padding">
       <div className="container-wide">
@@ -34,7 +37,7 @@ export function Insights() {
             <Link
               key={article.id}
               to={`/blog/${article.id}`}
-              className="group animate-fade-in [animation-fill-mode:backwards]"
+              className="group animate-fade-in [animation-fill-mode:backwards] insight-card"
               style={{ animationDelay: `${0.08 * (index + 1)}s` }}
             >
               {/* Unified Card Tile */}
