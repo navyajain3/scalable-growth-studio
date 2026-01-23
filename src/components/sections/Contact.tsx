@@ -31,7 +31,7 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left contact-content reveal-left">
-            <ShimmerBadge icon={Send} className="mb-6">Get in Touch</ShimmerBadge>
+            <ShimmerBadge className="mb-6">Get in Touch</ShimmerBadge>
             <AnimatedHeading as="h2" className="heading-lg mb-6">
               Let’s Build Something That Scales
             </AnimatedHeading>

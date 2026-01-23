@@ -43,7 +43,7 @@ export function Process() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge icon={Workflow} className="mb-6">Our Process</ShimmerBadge>
+          <ShimmerBadge className="mb-6">Our Process</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             A Simple, Smart, and Scalable Way to Build
           </AnimatedHeading>
