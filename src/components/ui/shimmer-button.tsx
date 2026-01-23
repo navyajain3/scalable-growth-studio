@@ -16,11 +16,11 @@ const ShimmerButton = React.forwardRef<HTMLAnchorElement, ShimmerButtonProps>(
         )}
         {...props}
       >
-        {/* Moving trail border effect */}
+        {/* Rotating gradient border */}
         <span 
           className="absolute inset-0 rounded-full"
           style={{
-            background: `conic-gradient(from var(--trail-angle, 0deg) at 50% 50%, transparent 0%, transparent 75%, #7e56e2 88%, #501ed4 95%, transparent 100%)`,
+            background: `conic-gradient(from var(--trail-angle, 0deg) at 50% 50%, #501ed4 0%, #7e56e2 25%, #501ed4 50%, #7e56e2 75%, #501ed4 100%)`,
             animation: "trail 3s linear infinite",
           }}
         />
