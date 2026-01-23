@@ -16,8 +16,8 @@ export function Hero() {
         <div className="absolute inset-0 aurora-bg opacity-40 dark:opacity-30" />
       </div>
 
-      {/* Glowing Globe/Arc at Bottom - Like Reference */}
-      <div className="absolute bottom-0 left-0 right-0 h-[60%] pointer-events-none">
+      {/* Glowing Globe/Arc at Bottom - Dark Mode Only */}
+      <div className="hidden dark:block absolute bottom-0 left-0 right-0 h-[60%] pointer-events-none opacity-85">
         <img 
           src={heroGlobe} 
           alt="" 
