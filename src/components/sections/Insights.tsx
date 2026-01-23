@@ -37,12 +37,12 @@ export function Insights() {
             <Link
               key={article.id}
               to={`/blog/${article.id}`}
-              className="group insight-card reveal-card"
+              className="group insight-card reveal-card h-full"
             >
               {/* Unified Card Tile */}
-              <div className="rounded-2xl bg-muted/30 backdrop-blur-sm border border-border/30 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
+              <div className="h-full rounded-2xl bg-muted/30 backdrop-blur-sm border border-border/30 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02] flex flex-col">
                 {/* Image */}
-                <div className={`aspect-[4/3] ${cardBackgrounds[index % cardBackgrounds.length]}`}>
+                <div className={`aspect-[4/3] flex-shrink-0 ${cardBackgrounds[index % cardBackgrounds.length]}`}>
                   {article.image ? (
                     <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
                   ) : (
@@ -53,9 +53,9 @@ export function Insights() {
                 </div>
 
                 {/* Content */}
-                <div className="p-4">
+                <div className="p-4 flex flex-col flex-grow">
                   <span className="text-sm text-muted-foreground block mb-2">{article.domain}</span>
-                  <h3 className="text-lg font-medium group-hover:text-violet-500 transition-colors leading-snug">
+                  <h3 className="text-lg font-medium group-hover:text-violet-500 transition-colors leading-snug line-clamp-3">
                     {article.title}
                   </h3>
                 </div>
