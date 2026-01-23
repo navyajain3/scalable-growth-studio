@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useServicesParallax } from "@/hooks/useGSAPScrollAnimations";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
+import { Layers } from "lucide-react";
 import serviceWebDev from "@/assets/service-web-dev.svg";
 import serviceUiUx from "@/assets/service-ui-ux.svg";
 import serviceGraphicDesign from "@/assets/service-graphic-design.svg";
@@ -140,7 +141,7 @@ export function Services() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 reveal-header">
-          <ShimmerBadge className="mb-6">Our Services</ShimmerBadge>
+          <ShimmerBadge icon={Layers} className="mb-6">Our Services</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             From Idea to Execution, We’ve Got You Covered
           </AnimatedHeading>

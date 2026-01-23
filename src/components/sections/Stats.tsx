@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useStatsParallax } from "@/hooks/useGSAPScrollAnimations";
@@ -123,7 +123,7 @@ export function Stats() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge className="mb-6">Testimonials</ShimmerBadge>
+          <ShimmerBadge icon={Quote} className="mb-6">Testimonials</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Trusted by Ambitious Brands Worldwide
           </AnimatedHeading>

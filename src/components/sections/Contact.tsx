@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Phone, Linkedin, Send } from "lucide-react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useContactParallax } from "@/hooks/useGSAPScrollAnimations";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
@@ -31,7 +31,7 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left contact-content reveal-left">
-            <ShimmerBadge className="mb-6">Get in Touch</ShimmerBadge>
+            <ShimmerBadge icon={Send} className="mb-6">Get in Touch</ShimmerBadge>
             <AnimatedHeading as="h2" className="heading-lg mb-6">
               Let’s Build Something That Scales
             </AnimatedHeading>

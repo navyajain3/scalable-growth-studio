@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
 import { useInsightsParallax } from "@/hooks/useGSAPScrollAnimations";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
+import { Lightbulb } from "lucide-react";
 
 // Placeholder gradient backgrounds for article cards (violet to magenta theme)
 const cardBackgrounds = [
@@ -21,7 +22,7 @@ export function Insights() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge className="mb-6">Insights</ShimmerBadge>
+          <ShimmerBadge icon={Lightbulb} className="mb-6">Insights</ShimmerBadge>
           <h2 className="heading-lg mb-4">Latest Thoughts from the Studio</h2>
           <p className="body-lg text-muted-foreground">
             Explore our perspectives on design, growth, and building brands that last.

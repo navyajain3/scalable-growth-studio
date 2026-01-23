@@ -1,4 +1,4 @@
-import { Users, Lightbulb, Target, Handshake, Zap, Award } from "lucide-react";
+import { Users, Lightbulb, Target, Handshake, Zap, Award, Sparkles } from "lucide-react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useWhyUsParallax } from "@/hooks/useGSAPScrollAnimations";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
@@ -51,7 +51,7 @@ export function WhyUs() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge className="mb-6">Why Us</ShimmerBadge>
+          <ShimmerBadge icon={Sparkles} className="mb-6">Why Us</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             We Don't Just Work for Your Brand, We Grow It with You
           </AnimatedHeading>

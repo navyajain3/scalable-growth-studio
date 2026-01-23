@@ -2,6 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useFAQParallax } from "@/hooks/useGSAPScrollAnimations";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
+import { HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -40,7 +41,7 @@ export function FAQ() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge className="mb-6">FAQs</ShimmerBadge>
+          <ShimmerBadge icon={HelpCircle} className="mb-6">FAQs</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Got Questions? We've Got You Covered
           </AnimatedHeading>

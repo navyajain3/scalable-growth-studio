@@ -1,4 +1,4 @@
-import { Telescope, Search, Map, Paintbrush, MessageSquare, Rocket } from "lucide-react";
+import { Telescope, Search, Map, Paintbrush, MessageSquare, Rocket, Workflow } from "lucide-react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
 
@@ -43,7 +43,7 @@ export function Process() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge className="mb-6">Our Process</ShimmerBadge>
+          <ShimmerBadge icon={Workflow} className="mb-6">Our Process</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             A Simple, Smart, and Scalable Way to Build
           </AnimatedHeading>
