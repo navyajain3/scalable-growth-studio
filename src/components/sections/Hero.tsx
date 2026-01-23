@@ -3,39 +3,28 @@ import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useHeroParallax } from "@/hooks/useGSAPScrollAnimations";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
+import heroGlobe from "@/assets/hero-globe.avif";
 
 export function Hero() {
   useHeroParallax();
 
   return (
     <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Background with Floating Orbs */}
+      {/* Background */}
       <div className="absolute inset-0 bg-background overflow-hidden">
-        {/* Subtle Purple Aurora Wave */}
+        {/* Subtle Aurora Wave */}
         <div className="absolute inset-0 aurora-bg opacity-40 dark:opacity-30" />
+      </div>
 
-        {/* Floating Orb 1 - Large center orb */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] animate-float-slow">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#501ed4]/15 via-[#6a3ad8]/10 to-[#7e56e2]/15 dark:from-[#501ed4]/5 dark:via-[#6a3ad8]/3 dark:to-[#7e56e2]/5 blur-3xl" />
-        </div>
-
-        {/* Floating Orb 2 - Top right */}
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] animate-float-medium">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[#7e56e2]/12 to-transparent dark:from-[#7e56e2]/4 blur-3xl" />
-        </div>
-
-        {/* Floating Orb 3 - Bottom left */}
-        <div className="absolute -bottom-32 -left-32 w-[450px] h-[450px] animate-float-slower">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#501ed4]/12 to-transparent dark:from-[#501ed4]/4 blur-3xl" />
-        </div>
-
-        {/* Floating Orb 4 - Bottom right accent */}
-        <div
-          className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] animate-float-medium"
-          style={{ animationDelay: "-5s" }}
-        >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[#6a3ad8]/10 to-transparent dark:from-[#6a3ad8]/3 blur-3xl" />
-        </div>
+      {/* Glowing Globe/Arc at Bottom - Like Reference */}
+      <div className="absolute bottom-0 left-0 right-0 h-[60%] pointer-events-none">
+        <img 
+          src={heroGlobe} 
+          alt="" 
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[140%] max-w-[1800px] h-auto object-contain"
+        />
+        {/* Additional glow overlay */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] max-w-[1600px] h-[400px] bg-gradient-to-t from-primary/20 via-primary/10 to-transparent blur-3xl" />
       </div>
 
       <div className="container-wide relative z-10 text-center pt-20">
