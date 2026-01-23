@@ -122,7 +122,7 @@ export function Stats() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
+          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Testimonials
             </span>
@@ -152,7 +152,7 @@ export function Stats() {
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-violet-500 text-violet-500" />
+                      <Star key={i} className="w-4 h-4 fill-[#7e56e2] text-[#7e56e2]" />
                     ))}
                   </div>
                   <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>
@@ -172,7 +172,7 @@ export function Stats() {
                 >
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-violet-500 text-violet-500" />
+                      <Star key={i} className="w-4 h-4 fill-[#7e56e2] text-[#7e56e2]" />
                     ))}
                   </div>
                   <p className="text-foreground leading-relaxed mb-6">"{testimonial.quote}"</p>

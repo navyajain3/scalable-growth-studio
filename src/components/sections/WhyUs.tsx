@@ -50,7 +50,7 @@ export function WhyUs() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
+          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Why Us
             </span>
@@ -71,7 +71,7 @@ export function WhyUs() {
               key={reason.title}
               className="glow-card glow-border p-7 hover-lift why-us-card reveal-card"
             >
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 flex items-center justify-center mb-5">
+              <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-[#501ed4]/10 to-[#7e56e2]/10 border border-[#501ed4]/20 flex items-center justify-center mb-5">
                 <reason.icon className="w-5 h-5 text-foreground" />
               </div>
               <h3 className="text-lg font-medium mb-2">{reason.title}</h3>
