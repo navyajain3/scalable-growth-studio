@@ -11,18 +11,18 @@ interface ShimmerBadgeProps {
 export function ShimmerBadge({ children, icon: Icon, className }: ShimmerBadgeProps) {
   return (
     <div className={cn(
-      "inline-flex items-center gap-2.5 pl-1 pr-4 py-1 rounded-full",
-      "border border-border/60 bg-card/50 backdrop-blur-sm",
+      "inline-flex items-center gap-2 pl-1 pr-3.5 py-0.5 rounded-full h-8",
+      "border border-border/50 bg-card/40 backdrop-blur-sm",
       className
     )}>
       {/* Icon circle */}
       {Icon && (
-        <span className="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-[#501ed4] to-[#7e56e2]">
-          <Icon className="w-3.5 h-3.5 text-white" strokeWidth={2} />
+        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-[#501ed4] to-[#7e56e2] shrink-0">
+          <Icon className="w-3 h-3 text-white" strokeWidth={2} />
         </span>
       )}
       {/* Text */}
-      <span className="text-foreground/90 text-sm font-normal">
+      <span className="text-foreground/80 text-[13px] font-normal whitespace-nowrap">
         {children}
       </span>
     </div>
