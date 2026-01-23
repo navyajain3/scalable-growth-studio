@@ -295,26 +295,23 @@ export const useWhoWeHelpParallax = () => {
   }, []);
 };
 
-// Why Us - Staggered card depth parallax
+// Why Us - Uniform card parallax (no stagger to keep aligned)
 export const useWhyUsParallax = () => {
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>(".why-us-card").forEach((card, index) => {
-        // Alternate between -20px and -35px for organic depth
-        const yOffset = index % 2 === 0 ? -20 : -35;
-        gsap.to(card, {
-          y: yOffset,
-          ease: "none",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.3,
-          },
-        });
+      // Apply uniform parallax to the entire cards container
+      gsap.to(".reveal-cards", {
+        y: -25,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#why-us",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.3,
+        },
       });
     });
 
