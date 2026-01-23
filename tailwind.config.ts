@@ -55,14 +55,15 @@ export default {
           primary: "hsl(var(--glow-primary))",
           subtle: "hsl(var(--glow-subtle))",
         },
-        purple: {
-          400: "hsl(292 100% 72%)",
-          500: "hsl(292 100% 66%)",
-          600: "hsl(292 85% 55%)",
+        blue: {
+          400: "hsl(225 90% 68%)",
+          500: "hsl(225 90% 60%)",
+          600: "hsl(225 90% 52%)",
         },
-        violet: {
-          400: "hsl(262 100% 72%)",
-          500: "hsl(262 100% 66%)",
+        indigo: {
+          500: "hsl(245 90% 60%)",
+          600: "hsl(245 90% 52%)",
+          700: "hsl(245 90% 45%)",
         },
       },
       borderRadius: {

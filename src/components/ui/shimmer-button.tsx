@@ -18,7 +18,7 @@ const ShimmerButton = React.forwardRef<HTMLAnchorElement, ShimmerButtonProps>(
       >
         {/* Animated border gradient */}
         <span className="absolute inset-0 overflow-hidden rounded-full">
-          <span className="absolute inset-[-100%] animate-[shimmer-spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,hsl(262_100%_66%/0.2)_0%,hsl(292_100%_66%/0.8)_10%,hsl(262_100%_66%/0.2)_20%)]" />
+          <span className="absolute inset-[-100%] animate-[shimmer-spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,hsl(225_90%_60%/0.2)_0%,hsl(245_90%_65%/0.8)_10%,hsl(225_90%_60%/0.2)_20%)]" />
         </span>
         
         {/* Inner background */}
