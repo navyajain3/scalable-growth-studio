@@ -11,6 +11,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
 import { useGSAPScrollAnimations, useScrollReveal, cleanupScrollTriggers } from "@/hooks/useGSAPScrollAnimations";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 const Index = () => {
   // Initialize GSAP ScrollTrigger
@@ -18,6 +19,9 @@ const Index = () => {
   
   // Initialize scroll reveal animations
   useScrollReveal();
+
+  // Initialize smooth scroll for anchor links
+  useSmoothScroll();
 
   useEffect(() => {
     return () => {
