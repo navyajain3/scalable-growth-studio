@@ -29,7 +29,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="reveal-card">
             <span className="text-xl font-semibold block mb-3">ScalKit</span>
-            <p className="text-muted-foreground text-sm">A Complete Digital Growth System for Brands Ready to Scale</p>
+            <p className="text-muted-foreground text-sm">A Complete Growth System for Scaling Brands</p>
           </div>
 
           {/* Quick Links Column */}
