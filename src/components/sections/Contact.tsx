@@ -26,7 +26,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="section-padding contact-section">
+    <section id="contact" className="section-padding bg-secondary/30 contact-section">
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Column - Content */}

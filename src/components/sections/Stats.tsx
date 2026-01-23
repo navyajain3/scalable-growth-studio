@@ -119,7 +119,7 @@ export function Stats() {
   useStatsParallax();
 
   return (
-    <section className="section-padding stats-section">
+    <section className="section-padding bg-secondary/30 stats-section">
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
