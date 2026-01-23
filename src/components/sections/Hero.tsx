@@ -65,6 +65,22 @@ export function Hero() {
             <ShimmerButton href="#services">View Services</ShimmerButton>
           </div>
         </div>
+
+        {/* Animated Scroll Indicator */}
+        <div 
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in"
+          style={{ animationDelay: "1s" }}
+        >
+          <a 
+            href="#who-we-help" 
+            className="flex flex-col items-center gap-2 text-muted-foreground/60 hover:text-muted-foreground transition-colors duration-300 group"
+          >
+            <span className="text-xs uppercase tracking-widest">Scroll</span>
+            <div className="w-5 h-8 rounded-full border border-muted-foreground/30 flex items-start justify-center p-1.5 group-hover:border-muted-foreground/50 transition-colors">
+              <div className="w-1 h-1.5 rounded-full bg-muted-foreground/60 animate-[bounce_1.5s_ease-in-out_infinite] group-hover:bg-muted-foreground transition-colors" />
+            </div>
+          </a>
+        </div>
       </div>
     </section>
   );
