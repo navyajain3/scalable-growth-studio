@@ -25,15 +25,15 @@ export function Footer() {
     <footer className="border-t border-border py-16 md:py-20 footer-section">
       <div className="container-wide footer-content">
         {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12 text-center md:text-left reveal-cards">
           {/* Brand Column */}
-          <div>
+          <div className="reveal-card">
             <span className="text-xl font-semibold block mb-3">ScalKit</span>
             <p className="text-muted-foreground text-sm">A Complete Digital Growth System for Brands Ready to Scale</p>
           </div>
 
           {/* Quick Links Column */}
-          <div>
+          <div className="reveal-card">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -47,7 +47,7 @@ export function Footer() {
           </div>
 
           {/* Services Column */}
-          <div>
+          <div className="reveal-card">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (
@@ -64,7 +64,7 @@ export function Footer() {
           </div>
 
           {/* Contact Column */}
-          <div>
+          <div className="reveal-card">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">Get in Touch</h4>
             <ul className="space-y-3">
               <li>

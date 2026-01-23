@@ -41,7 +41,7 @@ export function Process() {
     <section id="process" className="section-padding bg-secondary/30">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
           <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Our Process
@@ -56,15 +56,14 @@ export function Process() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-cards">
           {steps.map((step, index) => (
             <div
               key={index}
               className="p-6 rounded-2xl bg-card border border-border/40 
                          transition-all duration-300 
                          hover:border-border/80 hover:shadow-[0_0_30px_rgba(255,255,255,0.08)]
-                         animate-fade-in [animation-fill-mode:backwards]"
-              style={{ animationDelay: `${0.1 * index}s` }}
+                         reveal-card"
             >
               {/* Header: Icon + Number */}
               <div className="flex justify-between items-start mb-6">

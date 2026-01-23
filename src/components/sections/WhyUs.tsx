@@ -49,7 +49,7 @@ export function WhyUs() {
     <section id="why-us" className="section-padding bg-secondary/30">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
           <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Why Us
@@ -65,12 +65,11 @@ export function WhyUs() {
         </div>
 
         {/* Reasons Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reasons.map((reason, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-cards">
+          {reasons.map((reason) => (
             <div
               key={reason.title}
-              className="glow-card glow-border p-7 hover-lift opacity-0 animate-slide-up why-us-card"
-              style={{ animationDelay: `${0.08 * (index + 1)}s` }}
+              className="glow-card glow-border p-7 hover-lift why-us-card reveal-card"
             >
               <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/20 flex items-center justify-center mb-5">
                 <reason.icon className="w-5 h-5 text-foreground" />

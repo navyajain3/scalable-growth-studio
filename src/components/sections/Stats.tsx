@@ -71,8 +71,7 @@ function StatItem({ stat, index }: { stat: (typeof stats)[0]; index: number }) {
   return (
     <div
       ref={ref}
-      className="text-center opacity-0 animate-slide-up"
-      style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+      className="text-center reveal-card"
     >
       <div className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-2">
         {count}
@@ -122,7 +121,7 @@ export function Stats() {
     <section className="section-padding stats-section">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
           <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Testimonials
@@ -135,7 +134,7 @@ export function Stats() {
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-3 gap-8 mb-20 stats-row">
+        <div className="grid grid-cols-3 gap-8 mb-20 stats-row reveal-cards">
           {stats.map((stat, index) => (
             <StatItem key={stat.label} stat={stat} index={index} />
           ))}

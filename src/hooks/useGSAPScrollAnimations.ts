@@ -29,6 +29,135 @@ export const useGSAPScrollAnimations = () => {
   return { gsap, ScrollTrigger };
 };
 
+// Scroll Reveal - fade in and slide up elements as they enter viewport
+export const useScrollReveal = () => {
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) return;
+
+    const ctx = gsap.context(() => {
+      // Reveal section headers
+      gsap.utils.toArray<HTMLElement>(".reveal-header").forEach((el) => {
+        gsap.fromTo(
+          el,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+
+      // Reveal cards with stagger effect
+      gsap.utils.toArray<HTMLElement>(".reveal-cards").forEach((container) => {
+        const cards = container.querySelectorAll(".reveal-card");
+        gsap.fromTo(
+          cards,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
+            stagger: 0.1,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: container,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+
+      // Reveal individual elements
+      gsap.utils.toArray<HTMLElement>(".reveal-item").forEach((el, index) => {
+        gsap.fromTo(
+          el,
+          { y: 35, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.7,
+            delay: index * 0.05,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 88%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+
+      // Reveal from left
+      gsap.utils.toArray<HTMLElement>(".reveal-left").forEach((el) => {
+        gsap.fromTo(
+          el,
+          { x: -40, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+
+      // Reveal from right
+      gsap.utils.toArray<HTMLElement>(".reveal-right").forEach((el) => {
+        gsap.fromTo(
+          el,
+          { x: 40, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+
+      // Reveal with scale
+      gsap.utils.toArray<HTMLElement>(".reveal-scale").forEach((el) => {
+        gsap.fromTo(
+          el,
+          { scale: 0.9, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.7,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+};
+
 // Hero parallax - background glow moves slower
 export const useHeroParallax = () => {
   useEffect(() => {

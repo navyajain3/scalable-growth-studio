@@ -81,8 +81,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
 
   return (
     <div
-      className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center opacity-0 animate-slide-up`}
-      style={{ animationDelay: `${0.1 * (index + 1)}s` }}
+      className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center reveal-item`}
     >
       {/* Text Content */}
       <div className={`space-y-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
@@ -139,7 +138,7 @@ export function Services() {
     <section id="services" className="section-padding">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-20 reveal-header">
           <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Our Services
