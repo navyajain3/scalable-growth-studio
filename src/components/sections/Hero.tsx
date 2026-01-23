@@ -16,17 +16,17 @@ export function Hero() {
 
         {/* Floating Orb 1 - Large center orb */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] animate-float-slow">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#501ed4]/15 via-[#6a3ad8]/10 to-[#7e56e2]/15 dark:from-[#501ed4]/20 dark:via-[#6a3ad8]/12 dark:to-[#7e56e2]/20 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#501ed4]/15 via-[#6a3ad8]/10 to-[#7e56e2]/15 dark:from-[#501ed4]/10 dark:via-[#6a3ad8]/6 dark:to-[#7e56e2]/10 blur-3xl" />
         </div>
 
         {/* Floating Orb 2 - Top right */}
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] animate-float-medium">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[#7e56e2]/12 to-transparent dark:from-[#7e56e2]/18 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[#7e56e2]/12 to-transparent dark:from-[#7e56e2]/8 blur-3xl" />
         </div>
 
         {/* Floating Orb 3 - Bottom left */}
         <div className="absolute -bottom-32 -left-32 w-[450px] h-[450px] animate-float-slower">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#501ed4]/12 to-transparent dark:from-[#501ed4]/18 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#501ed4]/12 to-transparent dark:from-[#501ed4]/8 blur-3xl" />
         </div>
 
         {/* Floating Orb 4 - Bottom right accent */}
@@ -34,7 +34,7 @@ export function Hero() {
           className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] animate-float-medium"
           style={{ animationDelay: "-5s" }}
         >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[#6a3ad8]/10 to-transparent dark:from-[#6a3ad8]/15 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[#6a3ad8]/10 to-transparent dark:from-[#6a3ad8]/6 blur-3xl" />
         </div>
       </div>
 
