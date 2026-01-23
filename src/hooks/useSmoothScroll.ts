@@ -19,7 +19,7 @@ export const useSmoothScroll = () => {
           
           if (targetElement) {
             gsap.to(window, {
-              duration: 2,
+              duration: 3,
               scrollTo: {
                 y: targetElement,
                 offsetY: 80,
