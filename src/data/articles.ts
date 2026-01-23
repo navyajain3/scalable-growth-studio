@@ -15,7 +15,7 @@ export const articles: Article[] = [
     id: "why-people-leave-your-website",
     title: "Why People Leave Your Website in 10 Seconds (and How to Make Them Stay)",
     category: "UX Design",
-    domain: "uxdesign.cc",
+    domain: "Web Design & Development",
     excerpt: "First impressions matter. Learn the critical mistakes that drive visitors away and how to fix them.",
     content: `
 # Why People Leave Your Website in 10 Seconds
@@ -59,7 +59,7 @@ Design with intention. Every element should serve a purpose.
     id: "untapped-goldmine-linkedin",
     title: "The Untapped Goldmine: How Founders Can Win Big on LinkedIn",
     category: "Marketing",
-    domain: "linkedin.com",
+    domain: "LinkedIn Growth",
     excerpt: "Most businesses ignore LinkedIn's potential. Here's how to leverage it for real growth.",
     content: `
 # The Untapped Goldmine: LinkedIn
@@ -101,8 +101,8 @@ LinkedIn isn't saturated—it's underutilized. The businesses that invest in it 
   {
     id: "psychology-of-selling-instagram",
     title: "The Psychology of Selling on Instagram: How to Make People Want What You Offer",
-    category: "Social Media",
-    domain: "instagram.com",
+    category: "Social Media Marketing",
+    domain: "Social Media Marketing",
     excerpt: "Understanding the psychological triggers that turn followers into customers.",
     content: `
 # Psychology of Selling on Instagram
@@ -150,7 +150,7 @@ Remember: you're not just selling a product—you're selling a feeling, an ident
     id: "trust-founders-over-brands",
     title: "Why People Trust Founders More Than Brands (and How to Use That)",
     category: "Branding",
-    domain: "medium.com",
+    domain: "Founder-Led Marketing",
     excerpt: "The shift from corporate trust to personal trust—and how to leverage it.",
     content: `
 # Why People Trust Founders More Than Brands
@@ -200,7 +200,7 @@ The companies that will thrive are those that can humanize their brand through f
     id: "ai-changing-design",
     title: "How AI Is Changing the Way We Design, Write, and Sell Online",
     category: "Technology",
-    domain: "designweekly.io",
+    domain: "AI in Marketing, Design & Development",
     excerpt: "AI isn't replacing designers—it's making them more powerful than ever.",
     content: `
 # How AI Is Changing the Way We Design
@@ -255,7 +255,7 @@ AI is not the end of design—it's a new beginning.
     id: "building-design-system-from-scratch",
     title: "How to Build a Design System from Scratch",
     category: "Design",
-    domain: "figma.com",
+    domain: "Digital Design",
     excerpt: "A practical guide to creating scalable, consistent design systems that grow with your product.",
     content: `
 # Building a Design System From Scratch
