@@ -11,17 +11,21 @@ const ShimmerButton = React.forwardRef<HTMLAnchorElement, ShimmerButtonProps>(
       <a
         ref={ref}
         className={cn(
-          "group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full px-8 text-base font-medium transition-all duration-300 hover:-translate-y-0.5",
+          "group relative inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-medium transition-all duration-300 hover:-translate-y-0.5",
           className
         )}
         {...props}
       >
-        {/* Animated border gradient */}
-        <span className="absolute inset-0 overflow-hidden rounded-full">
-          <span className="absolute inset-[-100%] animate-[shimmer-spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#501ed4_0%,#7e56e2_50%,#501ed4_100%)]" />
-        </span>
+        {/* Moving trail border effect */}
+        <span 
+          className="absolute inset-0 rounded-full"
+          style={{
+            background: `conic-gradient(from var(--trail-angle, 0deg) at 50% 50%, transparent 0%, transparent 75%, #7e56e2 88%, #501ed4 95%, transparent 100%)`,
+            animation: "trail 3s linear infinite",
+          }}
+        />
         
-        {/* Inner background */}
+        {/* Inner background - maintains button shape */}
         <span className="absolute inset-[1px] rounded-full bg-card/90 backdrop-blur-sm transition-colors duration-300 group-hover:bg-card" />
         
         {/* Content */}
