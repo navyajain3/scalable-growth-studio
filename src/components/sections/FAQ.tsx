@@ -37,7 +37,7 @@ export function FAQ() {
   useFAQParallax();
 
   return (
-    <section className="section-padding bg-background faq-section">
+    <section className="section-padding bg-secondary/30 faq-section">
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">

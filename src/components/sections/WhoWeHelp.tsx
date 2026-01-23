@@ -56,7 +56,7 @@ export function WhoWeHelp() {
   }, [api]);
 
   return (
-    <section className="section-padding bg-background who-we-help-section">
+    <section className="section-padding bg-secondary/30 who-we-help-section">
       <div className="container-wide">
         {/* Section Header - Centered */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
