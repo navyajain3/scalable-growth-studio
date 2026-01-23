@@ -83,21 +83,23 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
 
   return (
     <div
-      className={`grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center reveal-item`}
+      className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center reveal-item"
     >
       {/* Text Content */}
-      <div className={`space-y-5 md:space-y-6 ${isEven ? "md:order-1" : "md:order-2"}`}>
-        <h3 className="heading-md">{service.title}</h3>
-        <p className="body-md">{service.description}</p>
-        <div className="flex flex-wrap gap-2 pt-2">
-          {service.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1.5 rounded-lg bg-primary/[0.09] dark:bg-primary/[0.12] text-foreground text-xs font-medium"
-            >
-              {tag}
-            </span>
-          ))}
+      <div className={`flex flex-col justify-center ${isEven ? "md:order-1" : "md:order-2"}`}>
+        <div className="space-y-5 md:space-y-6">
+          <h3 className="heading-md">{service.title}</h3>
+          <p className="body-md">{service.description}</p>
+          <div className="flex flex-wrap gap-2 pt-2">
+            {service.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1.5 rounded-lg bg-primary/[0.09] dark:bg-primary/[0.12] text-foreground text-xs font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
