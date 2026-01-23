@@ -58,7 +58,7 @@ export function WhoWeHelp() {
       <div className="container-wide">
         {/* Section Header - Centered */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
+          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Who We Help
             </span>
@@ -104,8 +104,8 @@ export function WhoWeHelp() {
                 key={index}
                 onClick={() => api?.scrollTo(index)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "w-6 bg-gradient-to-r from-violet-500 to-purple-500"
+                current === index
+                    ? "w-6 bg-gradient-to-r from-[#501ed4] to-[#7e56e2]"
                     : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
@@ -164,7 +164,7 @@ export function WhoWeHelp() {
           <div className="sticky top-32 flex items-center justify-center who-we-help-visual">
             <div className="relative w-full max-w-lg">
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/20 via-transparent to-purple-500/10 rounded-3xl blur-3xl transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#501ed4]/20 via-transparent to-[#7e56e2]/10 rounded-3xl blur-3xl transition-opacity duration-500" />
 
               {/* Image Container */}
               <div className="relative rounded-2xl overflow-hidden border border-border/50">
