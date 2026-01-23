@@ -137,7 +137,7 @@ export function Services() {
   useServicesParallax();
 
   return (
-    <section id="services" className="section-padding">
+    <section id="services" className="section-padding bg-secondary/30">
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 reveal-header">
