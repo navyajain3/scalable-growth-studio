@@ -81,10 +81,10 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
 
   return (
     <div
-      className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center reveal-item`}
+      className={`grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center reveal-item`}
     >
       {/* Text Content */}
-      <div className={`space-y-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+      <div className={`space-y-5 md:space-y-6 ${isEven ? "md:order-1" : "md:order-2"}`}>
         <h3 className="heading-md">{service.title}</h3>
         <p className="body-md">{service.description}</p>
         <div className="flex flex-wrap gap-2 pt-2">
@@ -100,7 +100,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
       </div>
 
       {/* Interactive Image */}
-      <div className={`${isEven ? "lg:order-2" : "lg:order-1"}`}>
+      <div className={`${isEven ? "md:order-2" : "md:order-1"}`}>
         <div
           className="relative group"
           onMouseMove={handleMouseMove}
@@ -153,7 +153,7 @@ export function Services() {
         </div>
 
         {/* Services List */}
-        <div className="space-y-24 lg:space-y-32">
+        <div className="space-y-20 md:space-y-24 lg:space-y-32">
           {services.map((service, index) => (
             <ServiceCard key={service.title} service={service} index={index} />
           ))}
