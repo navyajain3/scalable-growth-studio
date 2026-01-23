@@ -114,7 +114,7 @@ export function WhoWeHelp() {
 
         {/* Desktop: Side-by-side layout */}
         <div
-          className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-start"
+          className="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-24 items-center"
           onMouseLeave={() => setActiveIndex(null)}
         >
           {/* Left Column - Audience Blocks */}
