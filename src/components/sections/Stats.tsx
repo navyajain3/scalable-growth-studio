@@ -2,6 +2,7 @@ import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useStatsParallax } from "@/hooks/useGSAPScrollAnimations";
+import { ShimmerBadge } from "@/components/ui/shimmer-badge";
 
 const stats = [
   { value: 85, suffix: "+", label: "Brands scaled with us" },
@@ -122,11 +123,7 @@ export function Stats() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
-              Testimonials
-            </span>
-          </div>
+          <ShimmerBadge className="mb-6">Testimonials</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Trusted by Ambitious Brands Worldwide
           </AnimatedHeading>

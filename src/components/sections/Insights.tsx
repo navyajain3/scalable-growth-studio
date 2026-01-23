@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
 import { useInsightsParallax } from "@/hooks/useGSAPScrollAnimations";
+import { ShimmerBadge } from "@/components/ui/shimmer-badge";
 
 // Placeholder gradient backgrounds for article cards (violet to magenta theme)
 const cardBackgrounds = [
@@ -20,11 +21,7 @@ export function Insights() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] mb-6">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
-              Insights
-            </span>
-          </div>
+          <ShimmerBadge className="mb-6">Insights</ShimmerBadge>
           <h2 className="heading-lg mb-4">Latest Thoughts from the Studio</h2>
           <p className="body-lg text-muted-foreground">
             Explore our perspectives on design, growth, and building brands that last.
