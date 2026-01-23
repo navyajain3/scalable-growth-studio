@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
+import { useFAQParallax } from "@/hooks/useGSAPScrollAnimations";
 
 const faqs = [
   {
@@ -30,8 +31,11 @@ const faqs = [
 ];
 
 export function FAQ() {
+  // Initialize parallax
+  useFAQParallax();
+
   return (
-    <section className="section-padding bg-secondary/30">
+    <section className="section-padding bg-secondary/30 faq-section">
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -47,7 +51,7 @@ export function FAQ() {
         </div>
 
         {/* Accordion */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto faq-container">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem

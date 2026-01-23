@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
+import { useStatsParallax } from "@/hooks/useGSAPScrollAnimations";
 
 const stats = [
   { value: 85, suffix: "+", label: "Brands scaled with us" },
@@ -85,7 +86,7 @@ function StatItem({ stat, index }: { stat: (typeof stats)[0]; index: number }) {
 const testimonials = [
   {
     quote:
-      "ScalKit truly brought my vision to life with such care and creativity. They built a website that feels warm, elegant, and perfectly me. I felt heard every step of the way, and the end result couldn’t have been more beautiful.",
+      "ScalKit truly brought my vision to life with such care and creativity. They built a website that feels warm, elegant, and perfectly me. I felt heard every step of the way, and the end result couldn't have been more beautiful.",
     author: "Dr. Andrea Herschorn",
     role: "Founder & CEO",
     rating: 5,
@@ -106,7 +107,7 @@ const testimonials = [
   },
   {
     quote:
-      "Navya and her entire team have been incredibly easy to work with. The results exceeded our expectations, and her design sense is truly commendable. I haven’t worked with a more cooperative, understanding, and skilled team. Highly recommend their services!",
+      "Navya and her entire team have been incredibly easy to work with. The results exceeded our expectations, and her design sense is truly commendable. I haven't worked with a more cooperative, understanding, and skilled team. Highly recommend their services!",
     author: "Rahul K",
     role: "Founder",
     rating: 5,
@@ -114,8 +115,11 @@ const testimonials = [
 ];
 
 export function Stats() {
+  // Initialize parallax
+  useStatsParallax();
+
   return (
-    <section className="section-padding">
+    <section className="section-padding stats-section">
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -127,11 +131,11 @@ export function Stats() {
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Trusted by Ambitious Brands Worldwide
           </AnimatedHeading>
-          <p className="body-lg text-muted-foreground">Real feedback from founders and teams we’ve partnered with.</p>
+          <p className="body-lg text-muted-foreground">Real feedback from founders and teams we've partnered with.</p>
         </div>
 
         {/* Stats Row */}
-        <div className="grid grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-3 gap-8 mb-20 stats-row">
           {stats.map((stat, index) => (
             <StatItem key={stat.label} stat={stat} index={index} />
           ))}

@@ -1,3 +1,5 @@
+import { useFooterParallax } from "@/hooks/useGSAPScrollAnimations";
+
 const quickLinks = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
@@ -16,9 +18,12 @@ const services = [
 ];
 
 export function Footer() {
+  // Initialize parallax
+  useFooterParallax();
+
   return (
-    <footer className="border-t border-border py-16 md:py-20">
-      <div className="container-wide">
+    <footer className="border-t border-border py-16 md:py-20 footer-section">
+      <div className="container-wide footer-content">
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12 text-center md:text-left">
           {/* Brand Column */}
