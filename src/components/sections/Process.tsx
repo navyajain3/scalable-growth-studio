@@ -47,9 +47,7 @@ export function Process() {
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             A Simple, Smart, and Scalable Way to Build
           </AnimatedHeading>
-          <p className="body-lg">
-            Everything your brand needs to design, launch, and grow, delivered by one aligned team.
-          </p>
+          <p className="body-lg">Every great outcome starts with a good process. Here’s ours.</p>
         </div>
 
         {/* Cards Grid */}
