@@ -41,7 +41,7 @@ export function FAQ() {
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge icon={HelpCircle} className="mb-6">FAQs</ShimmerBadge>
+          <ShimmerBadge className="mb-6">FAQs</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Got Questions? We've Got You Covered
           </AnimatedHeading>

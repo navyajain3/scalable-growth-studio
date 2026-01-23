@@ -60,7 +60,7 @@ export function WhoWeHelp() {
       <div className="container-wide">
         {/* Section Header - Centered */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
-          <ShimmerBadge icon={Users} className="mb-6">Who We Help</ShimmerBadge>
+          <ShimmerBadge className="mb-6">Who We Help</ShimmerBadge>
           <AnimatedHeading as="h2" className="heading-lg mb-4">
             Empowering Bold Ideas across Industries
           </AnimatedHeading>
