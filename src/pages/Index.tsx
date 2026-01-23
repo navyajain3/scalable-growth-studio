@@ -10,11 +10,14 @@ import { Insights } from "@/components/sections/Insights";
 import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
-import { useGSAPScrollAnimations, cleanupScrollTriggers } from "@/hooks/useGSAPScrollAnimations";
+import { useGSAPScrollAnimations, useScrollReveal, cleanupScrollTriggers } from "@/hooks/useGSAPScrollAnimations";
 
 const Index = () => {
   // Initialize GSAP ScrollTrigger
   useGSAPScrollAnimations();
+  
+  // Initialize scroll reveal animations
+  useScrollReveal();
 
   useEffect(() => {
     return () => {

@@ -38,7 +38,7 @@ export function FAQ() {
     <section className="section-padding bg-secondary/30 faq-section">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
           <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               FAQs
@@ -51,14 +51,13 @@ export function FAQ() {
         </div>
 
         {/* Accordion */}
-        <div className="max-w-3xl mx-auto faq-container">
+        <div className="max-w-3xl mx-auto faq-container reveal-cards">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="glow-card border-none px-6 animate-slide-up [animation-fill-mode:backwards]"
-                style={{ animationDelay: `${0.08 * (index + 1)}s` }}
+                className="glow-card border-none px-6 reveal-card"
               >
                 <AccordionTrigger className="text-left text-base font-medium hover:no-underline py-5">
                   {faq.question}

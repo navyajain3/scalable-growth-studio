@@ -19,7 +19,7 @@ export function Insights() {
     <section id="insights" className="section-padding">
       <div className="container-wide">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
           <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
             <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
               Insights
@@ -32,13 +32,12 @@ export function Insights() {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto reveal-cards">
           {articles.map((article, index) => (
             <Link
               key={article.id}
               to={`/blog/${article.id}`}
-              className="group animate-fade-in [animation-fill-mode:backwards] insight-card"
-              style={{ animationDelay: `${0.08 * (index + 1)}s` }}
+              className="group insight-card reveal-card"
             >
               {/* Unified Card Tile */}
               <div className="rounded-2xl bg-muted/30 backdrop-blur-sm border border-border/30 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">

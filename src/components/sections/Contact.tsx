@@ -29,7 +29,7 @@ export function Contact() {
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Left Column - Content */}
-          <div className="opacity-0 animate-slide-up text-center lg:text-left contact-content" style={{ animationDelay: "0.1s" }}>
+          <div className="text-center lg:text-left contact-content reveal-left">
             <div className="inline-flex p-[1px] rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mb-6">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-background text-foreground text-xs font-medium uppercase tracking-wider">
                 Get in Touch
@@ -90,7 +90,7 @@ export function Contact() {
           </div>
 
           {/* Right Column - Form */}
-          <div className="opacity-0 animate-slide-up contact-form" style={{ animationDelay: "0.2s" }}>
+          <div className="contact-form reveal-right">
             <div className="glow-card p-8 md:p-10">
               <h3 className="text-xl font-medium mb-6">Send us a message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
