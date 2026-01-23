@@ -319,28 +319,10 @@ export const useWhyUsParallax = () => {
   }, []);
 };
 
-// Stats - Counter and testimonials depth
+// Stats - No parallax on stats row to prevent jerk with count-up animation
 export const useStatsParallax = () => {
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) return;
-
-    const ctx = gsap.context(() => {
-      // Stats row moves slower
-      gsap.to(".stats-row", {
-        y: -25,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".stats-section",
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1.2,
-        },
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
+  // Intentionally empty - the count-up animation provides sufficient visual interest
+  // Adding parallax here caused visual jerks due to conflict with IntersectionObserver
 };
 
 // Insights - Article cards parallax (uniform movement)
