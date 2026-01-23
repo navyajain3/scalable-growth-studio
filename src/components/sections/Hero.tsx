@@ -14,27 +14,27 @@ export function Hero() {
         {/* Subtle Purple Aurora Wave */}
         <div className="absolute inset-0 aurora-bg opacity-40 dark:opacity-30" />
 
-        {/* Floating Orb 1 - Large center-right orb */}
-        <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] animate-float-slow">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#501ed4]/25 via-[#6a3ad8]/18 to-[#7e56e2]/20 dark:from-[#501ed4]/12 dark:via-[#6a3ad8]/8 dark:to-[#7e56e2]/10 blur-3xl" />
+        {/* Floating Orb 1 - Large center orb */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] animate-float-slow">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#501ed4]/15 via-[#6a3ad8]/10 to-[#7e56e2]/15 dark:from-[#501ed4]/5 dark:via-[#6a3ad8]/3 dark:to-[#7e56e2]/5 blur-3xl" />
         </div>
 
-        {/* Floating Orb 2 - Top left corner */}
-        <div className="absolute -top-20 -left-20 w-[550px] h-[550px] animate-float-medium">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#7e56e2]/22 via-[#6a3ad8]/15 to-transparent dark:from-[#7e56e2]/10 dark:via-[#6a3ad8]/6 blur-3xl" />
+        {/* Floating Orb 2 - Top right */}
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] animate-float-medium">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[#7e56e2]/12 to-transparent dark:from-[#7e56e2]/4 blur-3xl" />
         </div>
 
-        {/* Floating Orb 3 - Bottom left accent */}
-        <div className="absolute bottom-1/4 left-1/6 w-[400px] h-[400px] animate-float-slower">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#501ed4]/20 to-transparent dark:from-[#501ed4]/8 blur-3xl" />
+        {/* Floating Orb 3 - Bottom left */}
+        <div className="absolute -bottom-32 -left-32 w-[450px] h-[450px] animate-float-slower">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#501ed4]/12 to-transparent dark:from-[#501ed4]/4 blur-3xl" />
         </div>
 
-        {/* Floating Orb 4 - Bottom right */}
+        {/* Floating Orb 4 - Bottom right accent */}
         <div
-          className="absolute -bottom-20 right-1/3 w-[450px] h-[450px] animate-float-medium"
+          className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] animate-float-medium"
           style={{ animationDelay: "-5s" }}
         >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[#6a3ad8]/18 to-transparent dark:from-[#6a3ad8]/8 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[#6a3ad8]/10 to-transparent dark:from-[#6a3ad8]/3 blur-3xl" />
         </div>
       </div>
 
