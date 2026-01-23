@@ -346,27 +346,23 @@ export const useStatsParallax = () => {
   }, []);
 };
 
-// Insights - Article cards parallax with column stagger
+// Insights - Article cards parallax (uniform movement)
 export const useInsightsParallax = () => {
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>(".insight-card").forEach((card, index) => {
-        // Stagger by column: left -25, center -40, right -30
-        const column = index % 3;
-        const yOffset = column === 0 ? -25 : column === 1 ? -40 : -30;
-        gsap.to(card, {
-          y: yOffset,
-          ease: "none",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 1.4,
-          },
-        });
+      // Apply uniform parallax to the entire cards container
+      gsap.to(".reveal-cards", {
+        y: -30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".reveal-cards",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.4,
+        },
       });
     });
 
