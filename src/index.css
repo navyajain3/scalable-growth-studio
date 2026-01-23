@@ -28,6 +28,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* CSS Custom Property for trail animation */
+@property --trail-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes trail {
+  from {
+    --trail-angle: 0deg;
+  }
+  to {
+    --trail-angle: 360deg;
+  }
+}
+
 @layer base {
   :root {
     /* Light Mode */
