@@ -16,17 +16,17 @@ export function Hero() {
 
         {/* Floating Orb 1 - Large center orb */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] animate-float-slow">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/15 via-[hsl(235_90%_65%/0.10)] to-indigo-500/15 dark:from-blue-500/5 dark:via-[hsl(235_90%_65%/0.03)] dark:to-indigo-500/5 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#501ed4]/15 via-[#6a3ad8]/10 to-[#7e56e2]/15 dark:from-[#501ed4]/5 dark:via-[#6a3ad8]/3 dark:to-[#7e56e2]/5 blur-3xl" />
         </div>
 
         {/* Floating Orb 2 - Top right */}
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] animate-float-medium">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-indigo-500/12 to-transparent dark:from-indigo-500/4 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-[#7e56e2]/12 to-transparent dark:from-[#7e56e2]/4 blur-3xl" />
         </div>
 
         {/* Floating Orb 3 - Bottom left */}
         <div className="absolute -bottom-32 -left-32 w-[450px] h-[450px] animate-float-slower">
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/12 to-transparent dark:from-blue-500/4 blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#501ed4]/12 to-transparent dark:from-[#501ed4]/4 blur-3xl" />
         </div>
 
         {/* Floating Orb 4 - Bottom right accent */}
@@ -34,7 +34,7 @@ export function Hero() {
           className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] animate-float-medium"
           style={{ animationDelay: "-5s" }}
         >
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[hsl(235_90%_65%/0.10)] to-transparent dark:from-[hsl(235_90%_65%/0.03)] blur-3xl" />
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tl from-[#6a3ad8]/10 to-transparent dark:from-[#6a3ad8]/3 blur-3xl" />
         </div>
       </div>
 
@@ -43,7 +43,7 @@ export function Hero() {
           {/* Year Pill Badge */}
           <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-card/80 border border-border/50 backdrop-blur-sm">
-              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-sm font-medium">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] text-white text-sm font-medium">
                 2026
               </span>
               <span className="text-foreground/90 text-sm font-medium tracking-wide">

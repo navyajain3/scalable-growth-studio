@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-sm hover:from-blue-600 hover:to-indigo-700 hover:shadow-glow-sm",
+        default: "bg-gradient-to-b from-[#501ed4] to-[#7e56e2] text-white shadow-sm hover:from-[#5f2de3] hover:to-[#8d65f1] hover:shadow-glow-sm",
         destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
-        outline: "border border-blue-500/30 bg-transparent text-foreground hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-indigo-500/10 hover:border-blue-500/50",
+        outline: "border border-[#7e56e2]/30 bg-transparent text-foreground hover:bg-gradient-to-r hover:from-[#501ed4]/10 hover:to-[#7e56e2]/10 hover:border-[#7e56e2]/50",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "text-foreground hover:bg-secondary hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-glow hover:from-blue-600 hover:to-indigo-700 hover:-translate-y-0.5 rounded-full",
-        "hero-outline": "border border-blue-500/30 bg-card/50 text-foreground backdrop-blur-sm hover:bg-gradient-to-r hover:from-blue-500/10 hover:to-indigo-500/10 hover:border-blue-500/50 hover:-translate-y-0.5",
-        nav: "bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full hover:from-blue-600 hover:to-indigo-700",
+        hero: "bg-gradient-to-r from-[#501ed4] to-[#7e56e2] text-white shadow-glow hover:from-[#5f2de3] hover:to-[#8d65f1] hover:-translate-y-0.5 rounded-full",
+        "hero-outline": "border border-[#7e56e2]/30 bg-card/50 text-foreground backdrop-blur-sm hover:bg-gradient-to-r hover:from-[#501ed4]/10 hover:to-[#7e56e2]/10 hover:border-[#7e56e2]/50 hover:-translate-y-0.5",
+        nav: "bg-gradient-to-r from-[#501ed4] to-[#7e56e2] text-white rounded-full hover:from-[#5f2de3] hover:to-[#8d65f1]",
       },
       size: {
         default: "h-11 px-6 py-2",
