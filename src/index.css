@@ -29,10 +29,6 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
   :root {
     /* Light Mode */
     --background: 0 0% 100%;
