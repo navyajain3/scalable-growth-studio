@@ -43,16 +43,14 @@ export function Hero() {
         <div className="hero-content max-w-4xl mx-auto space-y-8">
           {/* Year Pill Badge */}
           <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: "0.1s" }}>
-            <ShimmerBadge>
-              <span className="flex items-center gap-3">
-                <span className="px-3 py-0.5 rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] text-white text-sm font-medium">
-                  2026
-                </span>
-                <span className="text-foreground/90 text-sm font-medium tracking-wide normal-case">
-                  Digital Growth Studio
-                </span>
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-card/80 border border-border/50 backdrop-blur-sm">
+              <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[#501ed4] to-[#7e56e2] text-white text-sm font-medium">
+                2026
               </span>
-            </ShimmerBadge>
+              <span className="text-foreground/90 text-sm font-medium tracking-wide">
+                Digital Growth Studio
+              </span>
+            </div>
           </div>
 
           {/* Headline */}
