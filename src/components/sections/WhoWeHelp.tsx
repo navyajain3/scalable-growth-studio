@@ -159,7 +159,7 @@ export function WhoWeHelp() {
           </div>
 
           {/* Right Column - Visual */}
-          <div className="sticky top-32 flex items-center justify-center who-we-help-visual">
+          <div className="flex items-center justify-center who-we-help-visual">
             <div className="relative w-full max-w-lg">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#501ed4]/20 via-transparent to-[#7e56e2]/10 rounded-3xl blur-3xl transition-opacity duration-500" />
