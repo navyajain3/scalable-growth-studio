@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { AnimatedHeading } from "@/components/ui/animated-heading";
-import { ArrowRight } from "lucide-react";
 import { useHeroParallax } from "@/hooks/useGSAPScrollAnimations";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
 
@@ -70,10 +69,7 @@ export function Hero() {
             style={{ animationDelay: "0.5s" }}
           >
             <Button variant="hero" size="lg" asChild>
-              <a href="#contact">
-                Book a Call
-                <ArrowRight className="ml-1 h-4 w-4" />
-              </a>
+              <a href="#contact">Get in Touch</a>
             </Button>
             <ShimmerButton href="#services">View Services</ShimmerButton>
           </div>
