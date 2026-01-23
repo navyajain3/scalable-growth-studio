@@ -16,15 +16,13 @@ export function Hero() {
         <div className="absolute inset-0 aurora-bg opacity-40 dark:opacity-30" />
       </div>
 
-      {/* Glowing Globe/Arc at Bottom - Like Reference */}
-      <div className="absolute bottom-0 left-0 right-0 h-[60%] pointer-events-none">
+      {/* Glowing Globe/Arc at Bottom Center */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none">
         <img 
           src={heroGlobe} 
           alt="" 
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[140%] max-w-[1800px] h-auto object-contain"
+          className="w-[800px] max-w-[90vw] h-auto object-contain opacity-85"
         />
-        {/* Additional glow overlay */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] max-w-[1600px] h-[400px] bg-gradient-to-t from-primary/20 via-primary/10 to-transparent blur-3xl" />
       </div>
 
       <div className="container-wide relative z-10 text-center pt-20">
