@@ -31,10 +31,15 @@ export function Navbar() {
       }`}
     >
       <nav className="container-wide flex items-center justify-between h-20">
-        {/* Logo */}
-        <a href="#" className="text-2xl font-semibold tracking-tight text-foreground">
-          ScalKit
-        </a>
+        {/* Logo with subtle purple orb */}
+        <div className="relative">
+          <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-20 h-20 pointer-events-none">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#501ed4]/8 to-[#7e56e2]/5 dark:from-[#501ed4]/15 dark:to-[#7e56e2]/10 blur-2xl" />
+          </div>
+          <a href="#" className="relative text-2xl font-semibold tracking-tight text-foreground">
+            ScalKit
+          </a>
+        </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
