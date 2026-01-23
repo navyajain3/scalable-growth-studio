@@ -53,7 +53,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
           <Button variant="nav" size="sm" asChild>
-            <a href="#contact">Book a Call</a>
+            <a href="#contact">Get in Touch</a>
           </Button>
         </div>
 
@@ -86,7 +86,7 @@ export function Navbar() {
             ))}
             <Button variant="default" size="default" className="mt-4" asChild>
               <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
-                Book a Call
+                Get in Touch
               </a>
             </Button>
           </div>
