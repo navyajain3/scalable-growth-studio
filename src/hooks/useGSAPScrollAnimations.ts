@@ -74,7 +74,7 @@ export const useServicesParallax = () => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".service-image").forEach((image) => {
         gsap.to(image, {
-          y: -25,
+          y: -45,
           ease: "none",
           scrollTrigger: {
             trigger: image,
@@ -151,7 +151,7 @@ export const useWhoWeHelpParallax = () => {
     const ctx = gsap.context(() => {
       // Sticky image container parallax
       gsap.to(".who-we-help-visual", {
-        y: -30,
+        y: -50,
         ease: "none",
         scrollTrigger: {
           trigger: ".who-we-help-section",
@@ -174,8 +174,8 @@ export const useWhyUsParallax = () => {
 
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".why-us-card").forEach((card, index) => {
-        // Alternate between -10px and -18px for organic depth
-        const yOffset = index % 2 === 0 ? -10 : -18;
+        // Alternate between -20px and -35px for organic depth
+        const yOffset = index % 2 === 0 ? -20 : -35;
         gsap.to(card, {
           y: yOffset,
           ease: "none",
@@ -202,7 +202,7 @@ export const useStatsParallax = () => {
     const ctx = gsap.context(() => {
       // Stats row moves slower
       gsap.to(".stats-row", {
-        y: -12,
+        y: -25,
         ease: "none",
         scrollTrigger: {
           trigger: ".stats-section",
@@ -225,9 +225,9 @@ export const useInsightsParallax = () => {
 
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".insight-card").forEach((card, index) => {
-        // Stagger by column: left -12, center -18, right -14
+        // Stagger by column: left -25, center -40, right -30
         const column = index % 3;
-        const yOffset = column === 0 ? -12 : column === 1 ? -18 : -14;
+        const yOffset = column === 0 ? -25 : column === 1 ? -40 : -30;
         gsap.to(card, {
           y: yOffset,
           ease: "none",
@@ -253,7 +253,7 @@ export const useFAQParallax = () => {
 
     const ctx = gsap.context(() => {
       gsap.to(".faq-container", {
-        y: -8,
+        y: -18,
         ease: "none",
         scrollTrigger: {
           trigger: ".faq-section",
@@ -277,7 +277,7 @@ export const useFooterParallax = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".footer-content",
-        { y: 20 },
+        { y: 40 },
         {
           y: 0,
           ease: "none",
@@ -304,7 +304,7 @@ export const useContactParallax = () => {
     const ctx = gsap.context(() => {
       // Left content moves at different rate than right form
       gsap.to(".contact-content", {
-        y: -15,
+        y: -30,
         ease: "none",
         scrollTrigger: {
           trigger: ".contact-section",
@@ -315,7 +315,7 @@ export const useContactParallax = () => {
       });
 
       gsap.to(".contact-form", {
-        y: -10,
+        y: -20,
         ease: "none",
         scrollTrigger: {
           trigger: ".contact-section",
