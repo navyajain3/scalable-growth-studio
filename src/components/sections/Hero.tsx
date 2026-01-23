@@ -56,8 +56,8 @@ export function Hero() {
           </div>
 
           {/* Headline */}
-          <AnimatedHeading as="h1" className="heading-xl mb-6">
-            A Complete Digital Growth System for Brands Ready to Scale
+          <AnimatedHeading as="h1" className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-tight font-heading mb-6">
+            A Complete Growth System for Scaling Brands
           </AnimatedHeading>
 
           {/* Subtext */}
