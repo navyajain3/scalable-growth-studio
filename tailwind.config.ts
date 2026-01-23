@@ -55,15 +55,9 @@ export default {
           primary: "hsl(var(--glow-primary))",
           subtle: "hsl(var(--glow-subtle))",
         },
-        blue: {
-          400: "hsl(225 90% 68%)",
-          500: "hsl(225 90% 60%)",
-          600: "hsl(225 90% 52%)",
-        },
-        indigo: {
-          500: "hsl(245 90% 60%)",
-          600: "hsl(245 90% 52%)",
-          700: "hsl(245 90% 45%)",
+        brand: {
+          start: "#501ed4",
+          end: "#7e56e2",
         },
       },
       borderRadius: {
