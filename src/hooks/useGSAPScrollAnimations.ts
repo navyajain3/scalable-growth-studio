@@ -271,16 +271,27 @@ export const useSectionReveals = () => {
   }, []);
 };
 
-// Who We Help - Entire section parallax (both columns move together)
+// Who We Help - Entire grid parallax (both columns move together to stay aligned)
 export const useWhoWeHelpParallax = () => {
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
 
-    // No individual parallax - keeps image and text aligned
-    // The section uses items-center grid alignment instead
+    const ctx = gsap.context(() => {
+      // Apply parallax to the entire section content grid
+      gsap.to(".who-we-help-grid", {
+        y: -35,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".who-we-help-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.2,
+        },
+      });
+    });
 
-    return () => {};
+    return () => ctx.revert();
   }, []);
 };
 
