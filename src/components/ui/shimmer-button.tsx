@@ -3,15 +3,23 @@ import { cn } from "@/lib/utils";
 
 interface ShimmerButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
+  size?: "default" | "sm" | "lg";
 }
 
+const sizeClasses = {
+  default: "h-11 px-6 text-sm",
+  sm: "h-9 px-5 text-xs",
+  lg: "h-12 px-8 text-base",
+};
+
 const ShimmerButton = React.forwardRef<HTMLAnchorElement, ShimmerButtonProps>(
-  ({ className, children, ...props }, ref) => {
+  ({ className, children, size = "default", ...props }, ref) => {
     return (
       <a
         ref={ref}
         className={cn(
-          "group relative inline-flex h-12 items-center justify-center rounded-full px-8 text-base font-medium transition-all duration-300 hover:-translate-y-0.5",
+          "group relative inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 hover:-translate-y-0.5",
+          sizeClasses[size],
           className
         )}
         {...props}
