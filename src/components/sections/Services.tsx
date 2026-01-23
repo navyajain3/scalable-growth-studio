@@ -91,7 +91,7 @@ function ServiceCard({ service, index }: { service: (typeof services)[0]; index:
           {service.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 rounded-full bg-transparent text-foreground text-xs font-medium border border-border/60"
+              className="px-3 py-1.5 rounded-lg bg-primary/5 text-foreground text-xs font-medium"
             >
               {tag}
             </span>
