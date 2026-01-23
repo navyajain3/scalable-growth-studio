@@ -68,7 +68,7 @@ export function Process() {
               {/* Header: Icon + Number */}
               <div className="flex justify-between items-start mb-6">
                 <step.icon className="w-8 h-8 text-foreground" strokeWidth={1.5} />
-                <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-primary/[0.09] dark:bg-primary/[0.12] flex items-center justify-center">
                   <span className="text-sm font-medium text-foreground">{index + 1}</span>
                 </div>
               </div>
