@@ -1,22 +1,24 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
 
 interface ShimmerBadgeProps {
   children: React.ReactNode;
-  icon?: LucideIcon;
   className?: string;
 }
 
-export function ShimmerBadge({ children, className }: Omit<ShimmerBadgeProps, 'icon'>) {
+export function ShimmerBadge({ children, className }: ShimmerBadgeProps) {
   return (
-    <div className={cn(
-      "inline-flex items-center px-4 py-1.5 rounded-full h-8",
-      "border border-border/50 bg-card/40 backdrop-blur-sm",
-      className
-    )}>
-      <span className="text-foreground/80 text-[13px] font-normal whitespace-nowrap">
-        {children}
+    <div 
+      className={cn(
+        "inline-flex items-center rounded-full p-[1px]",
+        "bg-gradient-to-r from-[#501ed4] to-[#7e56e2]",
+        className
+      )}
+    >
+      <span className="inline-flex items-center px-5 py-2 rounded-full bg-card">
+        <span className="text-foreground text-xs font-medium tracking-wider uppercase">
+          {children}
+        </span>
       </span>
     </div>
   );
