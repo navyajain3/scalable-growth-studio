@@ -1,8 +1,13 @@
+# ScalKit Robots.txt
+# https://scalkit.com
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -10,5 +15,23 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
 User-agent: *
 Allow: /
+Crawl-delay: 2
+
+# Sitemap location
+Sitemap: https://scalkit.com/sitemap.xml
+
+# Disallow common non-content paths
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /node_modules/

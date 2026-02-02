@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { AnimatedHeading } from "@/components/ui/animated-heading";
 import { useFAQParallax } from "@/hooks/useGSAPScrollAnimations";
 import { ShimmerBadge } from "@/components/ui/shimmer-badge";
-import { HelpCircle } from "lucide-react";
+import { FAQSchema } from "@/components/FAQSchema";
 
 const faqs = [
   {
@@ -37,7 +37,8 @@ export function FAQ() {
   useFAQParallax();
 
   return (
-    <section className="section-padding bg-secondary/30 faq-section">
+    <section id="faq" className="section-padding bg-secondary/30 faq-section" aria-labelledby="faq-heading">
+      <FAQSchema faqs={faqs} />
       <div className="container-wide">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-header">
