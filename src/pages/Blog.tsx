@@ -4,6 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import { articles } from "@/data/articles";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { SEOHead } from "@/components/SEOHead";
+import { ArticleSchema } from "@/components/ArticleSchema";
 
 export default function Blog() {
   const { id } = useParams<{ id: string }>();
@@ -37,6 +39,21 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title={`${article.title} | ScalKit Insights`}
+        description={article.excerpt}
+        url={`https://scalkit.com/blog/${article.id}`}
+        type="article"
+        publishedTime={article.date}
+        keywords={[article.category, article.domain, "digital agency", "marketing"]}
+      />
+      <ArticleSchema
+        title={article.title}
+        description={article.excerpt}
+        url={`https://scalkit.com/blog/${article.id}`}
+        datePublished={article.date}
+        category={article.category}
+      />
       <Navbar />
       
       <article className="section-padding">

@@ -11,6 +11,7 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/Footer";
 import { useGSAPScrollAnimations, useScrollReveal, cleanupScrollTriggers } from "@/hooks/useGSAPScrollAnimations";
+import { SEOHead } from "@/components/SEOHead";
 
 
 const Index = () => {
@@ -29,6 +30,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead />
       <Navbar />
       <main>
         <Hero />
